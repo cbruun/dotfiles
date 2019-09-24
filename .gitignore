@@ -1,0 +1,18 @@
+# Project
+
+# OS
+*~
+## OSX
+.DS_Store
+
+# IDE
+## Visual Studio Code
+.vscode
+
+# Tools
+## Terraform
+.terraform/
+*.tfvars
+*.tfstate.backup
+*.tfstate.lock
+*.tfstate.lock.info

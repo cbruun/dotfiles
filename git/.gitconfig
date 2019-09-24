@@ -1,0 +1,14 @@
+[user]
+    name = Casper Bruun
+    email = casperbruun@gmail.com
+[core]
+    editor = vim
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+    interactive = auto
+[diff]
+	tool = vimdiff
+[gitweb]
+    owner = "Casper Bruun"
