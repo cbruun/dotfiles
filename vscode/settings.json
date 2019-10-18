@@ -1,9 +1,4 @@
 {
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.DS_Store": true,
-        "**/bin": true,
-        "**/obj": true
-    }
+    "editor.fontSize": 20,
+    "editor.fontFamily": "'Ubuntu Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'"
 }
