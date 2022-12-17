@@ -20,9 +20,9 @@ packages/
 
 # IDE
 
-## Visual Studio
+## Visual Studio / Visual Studio Code
 .vs/
-.history/
+.vscode/
 
 ## JetBrains IDEs
 *.iml
