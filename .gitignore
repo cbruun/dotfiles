@@ -1,18 +1,46 @@
-# Project
+# Projects
+
+# Languages and tools
+
+## Terraform
+.terraform/
+terraform.tfvars
+terraform.exe
+terraform.zip
+
+### Terraform state
+.terraform.tfstate.d/
+*.tfstate
+*.tfstate.*
+
+# .NET
+obj/
+bin/
+packages/
+
+# IDE
+
+## Visual Studio
+.vs/
+.history/
+
+## JetBrains IDEs
+*.iml
+.idea/
+
+## ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings
+
+## Visual Studio user-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
 # OS
 *~
+
 ## OSX
 .DS_Store
-
-# IDE
-## Visual Studio Code
-.vscode
-
-# Tools
-## Terraform
-.terraform/
-*.tfvars
-*.tfstate.backup
-*.tfstate.lock
-*.tfstate.lock.info
