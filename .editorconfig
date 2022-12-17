@@ -8,8 +8,18 @@ indent_size = 4
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.{json,xml,yml,toml,config,tf,tfvars}]
-indent_size = 2
-
 [*.md]
 trim_trailing_whitespace = false
+
+[*.csproj]
+indent_size = 2
+
+[*.config]
+indent_size = 2
+
+[*.{json,xml,yml,yaml,toml}]
+indent_size = 2
+
+[*.{tf,tfvars}]
+indent_size = 2
+
