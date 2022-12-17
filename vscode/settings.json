@@ -1,4 +1,9 @@
 {
-    "editor.fontSize": 20,
-    "editor.fontFamily": "'Ubuntu Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'"
+    "editor.fontFamily": "'JetBrains Mono'",
+    "editor.fontSize": 18,
+    "editor.fontLigatures": true,
+
+    "workbench.startupEditor": "none",
+
+    "telemetry.telemetryLevel": "off"
 }
