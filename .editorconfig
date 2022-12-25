@@ -23,3 +23,5 @@ indent_size = 2
 [*.{tf,tfvars}]
 indent_size = 2
 
+[*.sh]
+indent_size = 2
