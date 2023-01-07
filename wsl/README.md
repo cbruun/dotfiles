@@ -29,7 +29,7 @@ alias op="explorer.exe"
 alias home="cd ~/"
 alias win="cd /mnt/c/Users/cbr"
 alias proj="win && cd projects"
-alias pwsh="pwsh.exe"
 
+alias pwsh="pwsh.exe"
 alias az="az.exe"
 ```
