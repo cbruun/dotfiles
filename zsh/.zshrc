@@ -18,7 +18,7 @@ bindkey  '^[[Z'   reverse-menu-complete # Support alt-tab when auto-completing t
 
 # Set window title to current path
 precmd() {
-  print -Pn "\e]0;%~\a"
+  print -Pn "\e]0;Kitty %~\a"
 }
 
 # PATH
