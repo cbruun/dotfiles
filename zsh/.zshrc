@@ -25,7 +25,7 @@ autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
-# Keybinds
+# Keybinds. Find key sequences using "sed -n l"
 bindkey  "^[[H"     beginning-of-line                     # Support Home key
 bindkey  "^[[F"     end-of-line                           # Support End key
 bindkey  "^[[3~"    delete-char                           # Support Del key
