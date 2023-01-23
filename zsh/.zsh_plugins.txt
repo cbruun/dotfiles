@@ -2,3 +2,4 @@ zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-history-substring-search
 zdharma-continuum/fast-syntax-highlighting kind:defer
+MichaelAquilina/zsh-you-should-use kind:defer

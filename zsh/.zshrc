@@ -7,6 +7,9 @@ source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 # Initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
 
+# Customize alias reminder message for plugin: MichaelAquilina/zsh-you-should-use
+export YSU_MESSAGE_FORMAT="\n $(tput setaf 3) $(tput bold)$(tput setaf 4)%alias$(tput setaf 7) => %command"
+
 # Enable tab autocomplete, for instance when changing directory
 zstyle ':completion:*' menu select
 
@@ -53,6 +56,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Aliases
 alias zshconfig="code ~/.zshrc"
 alias zshplugins="code ~/.zsh_plugins.txt"
+alias dotfiles="cd ~/projects/dotfiles && code ."
 
 alias op=xdg-open
 
