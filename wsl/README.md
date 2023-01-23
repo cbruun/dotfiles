@@ -21,15 +21,17 @@ printf "\n[user]\ndefault = myusername\n" | sudo tee -a /etc/wsl.conf
 
 ## WSL specific ZSH config
 ```zsh
-# Enable the ssh-agent to remember SSH key passwords
-eval $(ssh-agent) &>/dev/null
+# Aliases - WSL
+alias zshconfig="vim ~/.zshrc"
+alias zshplugins="vim ~/.zsh_plugins.txt"
 
 alias op="explorer.exe"
+alias pwsh="pwsh.exe"
 
 alias home="cd ~/"
 alias win="cd /mnt/c/Users/cbr"
 alias proj="win && cd projects"
 
-alias pwsh="pwsh.exe"
-alias az="az.exe"
+# Enable ssh-agent to remember passwords
+eval $(ssh-agent) &>/dev/null
 ```
