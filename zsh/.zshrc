@@ -14,7 +14,7 @@ export YSU_MESSAGE_FORMAT="\n $(tput setaf 3) $(tput bold)$(tput setaf 4)%ali
 zstyle ':completion:*' menu select
 
 # Enable ZSH history for improved suggestions. See https://unix.stackexchange.com/questions/273861/unlimited-history-in-zsh
-export HISTFILE=~/.zsh_history
+export HISTFILE="$ZDOTDIR/.zsh_history"
 export HISTSIZE=2000
 export SAVEHIST=2000
 setopt appendhistory                      # Write to history
@@ -54,8 +54,8 @@ export PATH=$PATH:$HOME/.pulumi/bin
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Aliases
-alias zshconfig="code ~/.zshrc"
-alias zshplugins="code ~/.zsh_plugins.txt"
+alias zshconfig="code $ZDOTDIR/.zshrc"
+alias zshplugins="code $ZDOTDIR/.zsh_plugins.txt"
 alias dotfiles="cd ~/projects/dotfiles && code ."
 
 alias op=xdg-open

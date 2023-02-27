@@ -1,13 +1,11 @@
 # ZSH configuration
 
-## Installation
-Install ZSH, [Starship](https://starship.rs/) and the ZSH plugin manager [Antidote](https://getantidote.github.io/).
+## Setup
+Run the `setup.sh` script:
 
 ```sh
-sudo dnf install zsh
-curl -sS https://starship.rs/install.sh | sh
-git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
+chmod +x setup.sh
+./setup.sh
 ```
 
-## Dotfiles
-Place `.zsh_plugins.txt` and `.zshrc` in `~/`.
+This will install ZSH, copy all ZSH config files to the correct place, and install dependencies such as [Starship](https://starship.rs/) and [Antidote](https://getantidote.github.io/) .
