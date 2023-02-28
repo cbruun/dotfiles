@@ -2,39 +2,41 @@
 
 set -eu
 
-# Get the absolute path to this script, e.g. /home/user/bin/foo.sh. See https://stackoverflow.com/a/1638397
-SCRIPT=$(readlink -f "$0")
-SCRIPT_PATH=$(dirname "${SCRIPT}")
+# Get the absolute path to this script. See https://stackoverflow.com/a/1638397
+ZSH_PATH=$(dirname $(readlink -f "${BASH_SOURCE}"))
 
 # Set config paths
-export XDG_CONFIG_HOME="${HOME}/.config"
-export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
+. "${ZSH_PATH}/.zshenv"
 
-mkdir -p ~/.config
-mkdir -p ~/.config/zsh
+# Create XDG fodlers and ZDOTDIR
+mkdir -p $XDG_CONFIG_HOME
+mkdir -p $XDG_CACHE_HOME
+mkdir -p $XDG_DATA_HOME
+mkdir -p $XDG_STATE_HOME
+mkdir -p $ZDOTDIR
 
 # Install dependencies
 sudo dnf install -y git zsh util-linux-user
 
-# Set ZSH as default shell: https://askubuntu.com/questions/131823/how-to-make-zsh-the-default-shell
+# Set ZSH as default shell. See https://askubuntu.com/questions/131823/how-to-make-zsh-the-default-shell
 chsh -s $(which zsh)
 
-# Set ZSH environment: https://stackoverflow.com/a/46962370
-cp -f ${SCRIPT_PATH}/.zshenv ~/.zshenv
+# Set ZSH environment. See https://stackoverflow.com/a/46962370
+cp -f ${ZSH_PATH}/.zshenv ~/.zshenv
 
 # Copy profile
-cp -f ${SCRIPT_PATH}/.profile ~/.profile
+cp -f ${ZSH_PATH}/.profile ~/.profile
 
 # Copy ZSH dotfiles
-cp -f ${SCRIPT_PATH}/.zshrc ${ZDOTDIR}/.zshrc
-cp -f ${SCRIPT_PATH}/.zsh_plugins.txt ${ZDOTDIR}/.zsh_plugins.txt
+cp -f ${ZSH_PATH}/.zshrc ${ZDOTDIR}/.zshrc
+cp -f ${ZSH_PATH}/.zsh_plugins.txt ${ZDOTDIR}/.zsh_plugins.txt
 
 # Create ZSH history file
 touch ${ZDOTDIR}/.zsh_history
 
-# Install Antidote ZSH plugin manager: https://getantidote.github.io/
+# Install Antidote ZSH plugin manager. See https://getantidote.github.io/
 [ -d ${ZDOTDIR:-~}/.antidote ] && rm -rf ${ZDOTDIR:-~}/.antidote
 git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
 
 # Install Starship.rs
-curl -sS https://starship.rs/install.sh | sh
+curl -sS https://starship.rs/install.sh | sh -s -- -y

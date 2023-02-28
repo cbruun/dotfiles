@@ -2,11 +2,11 @@
 
 set -eu
 
-# Get the absolute path to this script, e.g. /home/user/bin/foo.sh. See https://stackoverflow.com/a/1638397
-SCRIPT=$(readlink -f "$0")
-SCRIPT_PATH=$(dirname "${SCRIPT}")
+# Get the absolute path to this script. See https://stackoverflow.com/a/1638397
+KITTY_PATH=$(dirname $(readlink -f "${BASH_SOURCE}"))
 
 # Copy Kitty config files
-mkdir -p ~/.config/kitty
-cp -f ${SCRIPT_PATH}/kitty.conf ~/.config/kitty/kitty.conf
-cp -f ${SCRIPT_PATH}/current-theme.conf ~/.config/kitty/current-theme.conf
+mkdir -p ${XDG_CONFIG_HOME}/kitty
+
+cp -f ${KITTY_PATH}/kitty.conf ${XDG_CONFIG_HOME}/kitty/kitty.conf
+cp -f ${KITTY_PATH}/current-theme.conf ${XDG_CONFIG_HOME}/kitty/current-theme.conf

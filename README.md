@@ -1,3 +1,10 @@
-# Configuration Files
+# dotfiles
+Useful collection of configuration files.
 
-Reusable configuration files for setting up a new machine.
+## Installation
+Run the `install.sh` script:
+
+```sh
+chmod +x install.sh
+./install.sh
+```
