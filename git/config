@@ -1,6 +1,8 @@
 [user]
     name = Casper Bruun
     email = casperbruun@gmail.com
+[init]
+    defaultBranch = main
 [core]
     editor = vim
 [color]
