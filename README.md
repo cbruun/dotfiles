@@ -1,10 +1,11 @@
 # dotfiles
 Useful collection of configuration files.
 
+Uses a `git` bare repo to handle the dotfiles. See [this article](https://www.atlassian.com/git/tutorials/dotfiles) for details.
+
 ## Installation
-Run the `install.sh` script:
+Run the following install script:
 
 ```sh
-chmod +x install.sh
-./install.sh
+curl -Lks https://gitlab.com/cbruun/dotfiles-installer/-/raw/main/install.sh | /bin/sh
 ```

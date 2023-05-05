@@ -1,7 +1,7 @@
 autoload -Uz compinit
 compinit
 
-source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+source ${ZDOTDIR}/.antidote/antidote.zsh
 
 # Antidoe plugin manager:
 # Initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
@@ -14,6 +14,7 @@ export YSU_MESSAGE_FORMAT="\n $(tput setaf 3) $(tput bold)$(tput setaf 4)%ali
 zstyle ':completion:*' menu select
 
 # Enable ZSH history for improved suggestions. See https://unix.stackexchange.com/questions/273861/unlimited-history-in-zsh
+touch "${ZDOTDIR}"/.zsh_history           # Ensure the history file exists
 export HISTFILE="$ZDOTDIR/.zsh_history"
 export HISTSIZE=2000
 export SAVEHIST=2000
@@ -42,7 +43,7 @@ bindkey  "^[[B"     down-line-or-search                   # Support DownArrow fo
 bindkey  "^[[1;3A"  history-beginning-search-backward     # Support Alt + UpArrow for searching backward in history based on cursor position
 bindkey  "^[[1;3B"  history-beginning-search-forward      # Support Alt + DownArrow for searching forward in history based on cursor position
 
-# Set window title to current path
+# Set terminal window title to current path
 precmd() {
   print -Pn "\e]0;Kitty %~\a"
 }
@@ -54,9 +55,10 @@ export PATH=$PATH:$HOME/.pulumi/bin
 export PATH=$PATH:$HOME/.cargo/bin
 
 # Aliases
-alias zshconfig="code $ZDOTDIR/.zshrc"
-alias zshplugins="code $ZDOTDIR/.zsh_plugins.txt"
-alias dotfiles="cd ~/projects/dotfiles && code ."
+alias zshconfig='code $ZDOTDIR/.zshrc'
+alias zshplugins='code $ZDOTDIR/.zsh_plugins.txt'
+alias dotfiles-edit='code $HOME/projects/dotfiles'
+alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 alias op=xdg-open
 
