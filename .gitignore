@@ -1,9 +1,6 @@
 # IDE / Editors
 *.swp
 
-## Visual Studio / Visual Studio Code
-.vscode/
-
 # OS
 *~
 
