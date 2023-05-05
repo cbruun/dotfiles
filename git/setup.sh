@@ -2,9 +2,10 @@
 
 set -eu
 
-# Get the absolute path to this script. See https://stackoverflow.com/a/1638397
-GIT_PATH=$(dirname $(readlink -f "${BASH_SOURCE}"))
+GIT_PATH=$DOTFILES_PATH/git
 
-# Copy Kitty config files
-mkdir -p ${XDG_CONFIG_HOME}/git
-cp -f ${GIT_PATH}/config ${XDG_CONFIG_HOME}/git/config
+# Ensure the Git config folder exists
+mkdir -p "${XDG_CONFIG_HOME}"/git
+
+# Copy the Git config file
+cp -f "${GIT_PATH}"/config "${XDG_CONFIG_HOME}"/git/config

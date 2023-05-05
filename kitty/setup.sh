@@ -2,11 +2,11 @@
 
 set -eu
 
-# Get the absolute path to this script. See https://stackoverflow.com/a/1638397
-KITTY_PATH=$(dirname $(readlink -f "${BASH_SOURCE}"))
+KITTY_PATH=$DOTFILES_PATH/kitty
 
-# Copy Kitty config files
-mkdir -p ${XDG_CONFIG_HOME}/kitty
+# Ensure the Kitty config folder exists
+mkdir -p "${XDG_CONFIG_HOME}"/kitty
 
-cp -f ${KITTY_PATH}/kitty.conf ${XDG_CONFIG_HOME}/kitty/kitty.conf
-cp -f ${KITTY_PATH}/current-theme.conf ${XDG_CONFIG_HOME}/kitty/current-theme.conf
+# Copy the Kitty config files
+cp -f "${KITTY_PATH}"/kitty.conf "${XDG_CONFIG_HOME}"/kitty/kitty.conf
+cp -f "${KITTY_PATH}"/current-theme.conf "${XDG_CONFIG_HOME}"/kitty/current-theme.conf

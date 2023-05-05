@@ -2,7 +2,6 @@
 
 set -eu
 
-# Get the absolute path to this script. See https://stackoverflow.com/a/1638397
-STARSHIP_PATH=$(dirname $(readlink -f "${BASH_SOURCE}"))
+STARSHIP_PATH=$DOTFILES_PATH/starship
 
-cp -f ${STARSHIP_PATH}/starship.toml ${XDG_CONFIG_HOME}/starship.toml
+cp -f "${STARSHIP_PATH}"/starship.toml "${XDG_CONFIG_HOME}"/starship.toml

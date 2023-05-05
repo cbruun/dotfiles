@@ -51,7 +51,7 @@ precmd() {
 export PATH=$PATH:$HOME/.dotnet
 export PATH=$PATH:$HOME/.rider/rider-2022.3/bin
 export PATH=$PATH:$HOME/.pulumi/bin
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=$PATH:$HOME/.cargo/bin
 
 # Aliases
 alias zshconfig="code $ZDOTDIR/.zshrc"
