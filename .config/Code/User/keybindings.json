@@ -1,5 +1,15 @@
 [
-  { "key": "alt+enter", "command": "editor.action.quickFix", "when": "editorTextFocus" },
-  { "key": "ctrl+t", "command": "workbench.action.quickOpen" },
-  { "key": "ctrl+shift+t", "command": "workbench.action.showAllSymbols" }
+  {
+    "key": "alt+enter",
+    "command": "editor.action.quickFix",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.showAllSymbols"
+  }
 ]
