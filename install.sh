@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -eu
+
 dotfiles() {
   git --git-dir="$HOME"/.dotfiles/ --work-tree="$HOME" "$@"
 }
