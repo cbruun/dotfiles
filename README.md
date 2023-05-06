@@ -7,5 +7,5 @@ Uses a `git` bare repo to handle the dotfiles. See [this article](https://www.at
 Run the following install script:
 
 ```sh
-curl -Lks https://gitlab.com/cbruun/dotfiles-installer/-/raw/main/install.sh | /bin/sh
+curl -Lks https://gitlab.com/cbruun/dotfiles/-/raw/main/install.sh | /bin/sh
 ```
