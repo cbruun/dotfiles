@@ -49,10 +49,16 @@ precmd() {
 }
 
 # PATH
-export PATH=$PATH:$HOME/.dotnet
-export PATH=$PATH:$HOME/.rider/rider-2022.3/bin
+include_if_exists() {
+  [[ -f "$1" ]] && source "$1"
+}
+
+include_if_exists "${ZDOTDIR/.zsh_custom_paths}"
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.dotnet/bin
 export PATH=$PATH:$HOME/.pulumi/bin
 export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:$XDG_DATA_HOME/JetBrains/Toolbox/scripts
 
 # Aliases
 alias zshconfig='code $ZDOTDIR/.zshrc'
