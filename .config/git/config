@@ -6,11 +6,43 @@
 [core]
   editor = vim
 [color]
-  branch = auto
-  diff = auto
-  status = auto
-  interactive = auto
+  ui = auto
 [diff]
   tool = vimdiff
+[log]
+  abbrevcommit = true
+  decorate = no
+[pull]
+  ff = only
 [gitweb]
   owner = "Casper Bruun"
+[alias]
+  a = add
+  aa = add --all
+  c = commit
+  ci = commit
+  sw = switch
+  b = branch
+  br = branch
+
+  # Show working tree status using the short format
+  s = status -s
+  st = status -s
+
+  # Only merge if fast-forward is possible
+  mergeff = merge --ff-only
+
+  # View abbreviated commit log
+  l = log --pretty=oneline -n 25 --graph --abbrev-commit
+
+  # Amend the currently staged files to the latest commit
+	amend = commit --amend --no-edit
+
+  # Amend the currently staged files to the latest commit, including unstaged files
+  fix = commit -a --amend --no-edit
+
+  # Graph of commits
+	graph = log --graph --color --pretty=format:"%C(yellow)%H%C(green)%d%C(reset)%n%x20%cd%n%x20%cn%x20(%ce)%n%x20%s%n"
+
+  # Show contributors sorted by number of commits
+  contributors = shortlog --summary --numbered
