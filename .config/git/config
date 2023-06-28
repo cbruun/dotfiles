@@ -9,9 +9,6 @@
   ui = auto
 [diff]
   tool = vimdiff
-[log]
-  abbrevcommit = true
-  decorate = no
 [pull]
   ff = only
 [gitweb]
