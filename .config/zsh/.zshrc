@@ -1,6 +1,7 @@
 autoload -Uz compinit
 compinit
 
+source ${ZDOTDIR}/helper-functions.zsh
 source ${ZDOTDIR}/.antidote/antidote.zsh
 
 # Antidoe plugin manager:
@@ -45,32 +46,13 @@ bindkey "^[[1;3B"  history-beginning-search-forward      # Support Alt + DownArr
 
 # Set terminal window title to current path
 precmd() {
-  print -Pn "\e]0;Kitty %~\a"
+  print -Pn "\e]0;Terminal %~\a"
 }
 
-# PATH
-include_if_exists() {
-  [[ -f "$1" ]] && source "$1"
-}
+source "${ZDOTDIR}/paths.zsh"
+source_if_exists "${ZDOTDIR}/custom_paths.zsh}"
 
-include_if_exists "${ZDOTDIR/.zsh_custom_paths}"
-export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$HOME/.dotnet
-export PATH=$PATH:$HOME/.pulumi/bin
-export PATH=$PATH:$HOME/.cargo/bin
-export PATH=$PATH:$XDG_DATA_HOME/JetBrains/Toolbox/scripts
+source "${ZDOTDIR}/aliases.zsh"
 
-# Aliases
-alias zshconfig='code $ZDOTDIR/.zshrc'
-alias zshplugins='code $ZDOTDIR/.zsh_plugins.txt'
-alias dotfiles-edit='code $HOME/projects/dotfiles'
-alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-alias op=xdg-open
-
-# Node Version Manager
-export NVM_DIR="$XDG_CONFIG_HOME/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-# Starship - https://starship.rs/
-eval "$(starship init zsh)"
+source "${ZDOTDIR}/nvm.zsh"
+source "${ZDOTDIR}/starship.zsh"
