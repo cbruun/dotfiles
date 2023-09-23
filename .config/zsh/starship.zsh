@@ -1,4 +1,4 @@
-starship_update() {
+update_starship() {
   curl -sS https://starship.rs/install.sh | sh -s -- -y
 }
 
