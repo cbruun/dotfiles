@@ -56,3 +56,4 @@ source "${ZDOTDIR}/aliases.zsh"
 
 source "${ZDOTDIR}/nvm.zsh"
 source "${ZDOTDIR}/starship.zsh"
+source "${ZDOTDIR}/docker.zsh"
