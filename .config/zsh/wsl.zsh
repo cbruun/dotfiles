@@ -10,4 +10,3 @@ alias tf=terraform
 
 # Enable ssh-agent to remember passwords
 eval $(ssh-agent) &>/dev/null
-
