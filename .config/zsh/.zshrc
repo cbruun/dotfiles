@@ -57,3 +57,7 @@ source "${ZDOTDIR}/aliases.zsh"
 source "${ZDOTDIR}/nvm.zsh"
 source "${ZDOTDIR}/starship.zsh"
 source "${ZDOTDIR}/docker.zsh"
+
+if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
+  source "${ZDOTDIR}/wsl.zsh"
+fi
