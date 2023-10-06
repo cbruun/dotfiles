@@ -13,6 +13,8 @@
   ff = only
 [gitweb]
   owner = "Casper Bruun"
+[credential "https://dev.azure.com"]
+  useHttpPath = true
 [alias]
   a = add
   aa = add --all
@@ -33,13 +35,13 @@
   l = log --pretty=oneline -n 25 --graph --abbrev-commit
 
   # Amend the currently staged files to the latest commit
-	amend = commit --amend --no-edit
+  amend = commit --amend --no-edit
 
   # Amend the currently staged files to the latest commit, including unstaged files
   fix = commit -a --amend --no-edit
 
   # Graph of commits
-	graph = log --graph --color --pretty=format:"%C(yellow)%H%C(green)%d%C(reset)%n%x20%cd%n%x20%cn%x20(%ce)%n%x20%s%n"
+  graph = log --graph --color --pretty=format:"%C(yellow)%H%C(green)%d%C(reset)%n%x20%cd%n%x20%cn%x20(%ce)%n%x20%s%n"
 
   # Show contributors sorted by number of commits
   contributors = shortlog --summary --numbered
