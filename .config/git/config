@@ -1,20 +1,28 @@
 [user]
 name = Casper Bruun
 email = casperbruun@gmail.com
+
 [init]
 defaultBranch = main
+
 [core]
 editor = vim
+
 [color]
 ui = auto
+
 [diff]
 tool = vimdiff
+
 [pull]
 ff = only
+
 [gitweb]
 owner = "Casper Bruun"
+
 [credential "https://dev.azure.com"]
 useHttpPath = true
+
 [alias]
 a = add
 aa = add --all
