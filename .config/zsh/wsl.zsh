@@ -12,9 +12,9 @@ alias op="op.exe"
 eval $(ssh-agent) &>/dev/null
 
 update_time() {
-  if ! command_exists ntpudate; then
-    echo "Error: ntpdate command not found. Install package 'ntpsec'"
-  else
+  if command_exists ntpdate; then
     sudo ntpdate time.windows.com
+  else
+    echo "Error: ntpdate command not found. Install package 'ntpsec'"
   fi
 }
