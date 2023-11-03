@@ -49,6 +49,8 @@ precmd() {
   print -Pn "\e]0;Terminal %~\a"
 }
 
+source "${ZDOTDIR}/env_variables.zsh"
+
 source "${ZDOTDIR}/paths.zsh"
 source_if_exists "${ZDOTDIR}/custom_paths.zsh}"
 
