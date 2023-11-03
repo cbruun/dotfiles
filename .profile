@@ -1,6 +1,7 @@
 #!/bin/sh
 
-export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:=${HOME}/.config}"
-export XDG_CACHE_HOME="${XDG_CACHE_HOME:=${HOME}/.cache}"
-export XDG_DATA_HOME="${XDG_DATA_HOME:=${HOME}/.local/share}"
-export XDG_STATE_HOME="${XDG_STATE_HOME:=${HOME}/.local/state}"
+# Ensure environment variables and PATH are set correctly for all shells.
+# This is important for apps not launched from ZSH.
+. "${HOME}/.config/zsh/base_config/env_xdg.sh"
+. "${HOME}/.config/zsh/base_config/env.sh"
+. "${HOME}/.config/zsh/base_config/paths.sh"

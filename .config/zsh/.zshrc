@@ -1,7 +1,7 @@
 autoload -Uz compinit
 compinit
 
-source ${ZDOTDIR}/helper-functions.zsh
+source ${ZDOTDIR}/common.zsh
 source ${ZDOTDIR}/.antidote/antidote.zsh
 
 # Antidoe plugin manager:
@@ -49,17 +49,17 @@ precmd() {
   print -Pn "\e]0;Terminal %~\a"
 }
 
-source "${ZDOTDIR}/env_variables.zsh"
+source "${ZDOTDIR}/base_config/env.sh"
+source "${ZDOTDIR}/base_config/paths.sh"
 
-source "${ZDOTDIR}/paths.zsh"
 source_if_exists "${ZDOTDIR}/custom_paths.zsh}"
 
-source "${ZDOTDIR}/aliases.zsh"
+source "${ZDOTDIR}/config/aliases.zsh"
 
-source "${ZDOTDIR}/nvm.zsh"
-source "${ZDOTDIR}/starship.zsh"
-source "${ZDOTDIR}/docker.zsh"
+source "${ZDOTDIR}/config/nvm.zsh"
+source "${ZDOTDIR}/config/starship.zsh"
+source "${ZDOTDIR}/config/docker.zsh"
 
 if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
-  source "${ZDOTDIR}/wsl.zsh"
+  source "${ZDOTDIR}/config/wsl.zsh"
 fi
