@@ -56,7 +56,6 @@ source_if_exists "${ZDOTDIR}/custom_paths.zsh}"
 
 source "${ZDOTDIR}/config/aliases.zsh"
 
-source "${ZDOTDIR}/config/nvm.zsh"
 source "${ZDOTDIR}/config/starship.zsh"
 source "${ZDOTDIR}/config/docker.zsh"
 
