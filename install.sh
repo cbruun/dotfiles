@@ -9,7 +9,7 @@ dotfiles() {
 DOTFILES_LOCATION="${HOME}"/.dotfiles
 
 if [ ! -d "$DOTFILES_LOCATION" ]; then
-  git clone --bare https://gitlab.com/cbruun/dotfiles.git "${HOME}"/.dotfiles
+  git clone --bare https://github.com/cbruun/dotfiles.git "${HOME}"/.dotfiles
 else
   dotfiles pull
 fi
