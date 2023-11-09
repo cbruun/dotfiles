@@ -1,6 +1,6 @@
 # Project
 .dotfiles/
-.zsh_custom_paths
+.config/zsh/custom_paths.zsh
 
 # IDE / Editors
 *.swp
