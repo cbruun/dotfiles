@@ -2,6 +2,11 @@
 .dotfiles/
 .config/zsh/custom_paths.zsh
 
+# Shell history
+.bash_history
+.zsh_history
+.histfile
+
 # IDE / Editors
 *.swp
 
