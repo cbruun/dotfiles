@@ -35,8 +35,6 @@ c = commit -m
 ci = commit -m
 d = diff
 ds = diff --staged
-p = push
-pu = push
 sw = switch
 
 # Show the git configuration
