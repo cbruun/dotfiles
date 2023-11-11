@@ -4,7 +4,12 @@
   "editor.fontLigatures": true,
   "editor.lineHeight": 24,
 
-  "workbench.startupEditor": "none",
+  "editor.mouseWheelScrollSensitivity": 2,
+  "editor.fastScrollSensitivity": 3,
 
-  "telemetry.telemetryLevel": "off"
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  "telemetry.telemetryLevel": "off",
+
+  "workbench.startupEditor": "none",  
 }
