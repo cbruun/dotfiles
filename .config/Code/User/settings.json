@@ -11,5 +11,5 @@
 
   "telemetry.telemetryLevel": "off",
 
-  "workbench.startupEditor": "none",  
+  "workbench.startupEditor": "none",
 }
