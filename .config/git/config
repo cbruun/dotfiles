@@ -14,6 +14,9 @@ ui = auto
 [diff]
 tool = vimdiff
 
+[push]
+autoSetupRemote = true
+
 [pull]
 ff = only
 
@@ -26,11 +29,18 @@ useHttpPath = true
 [alias]
 a = add
 aa = add --all
-c = commit
-ci = commit
-sw = switch
 b = branch
 br = branch
+c = commit -m
+ci = commit -m
+d = diff
+ds = diff --staged
+p = push
+pu = push
+sw = switch
+
+# Show the git configuration
+cfg = config --global --list
 
 # Show working tree status using the short format
 s = status -s
@@ -40,16 +50,26 @@ st = status -s
 mergeff = merge --ff-only
 
 # View abbreviated commit log
-l = log --pretty=oneline -n 25 --graph --abbrev-commit
+l = log --pretty=oneline --graph --decorate --abbrev-commit -n 25
+ll = log --pretty=oneline --graph --decorate --abbrev-commit
+
+# Show details about the last commit
+last = log -1 HEAD --stat --abbrev-commit
 
 # Amend the currently staged files to the latest commit
 amend = commit --amend --no-edit
 
 # Amend the currently staged files to the latest commit, including unstaged files
-fix = commit -a --amend --no-edit
+fix = commit -all --amend --no-edit
+
+# Show all gitignored files
+others = ls-files --others --ignored --exclude-from=.gitignore
 
 # Graph of commits
 graph = log --graph --color --pretty=format:"%C(yellow)%H%C(green)%d%C(reset)%n%x20%cd%n%x20%cn%x20(%ce)%n%x20%s%n"
 
 # Show contributors sorted by number of commits
 contributors = shortlog --summary --numbered
+
+# Search commit messages
+search = !git rev-list --all | xargs git grep -F
