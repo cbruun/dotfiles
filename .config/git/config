@@ -70,4 +70,4 @@ graph = log --graph --color --pretty=format:"%C(yellow)%H%C(green)%d%C(reset)%n%
 contributors = shortlog --summary --numbered
 
 # Search commit messages
-search = !git rev-list --all | xargs git grep -F
+search = !git rev-list --all --abbrev-commit | xargs git grep -F
