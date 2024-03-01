@@ -9,6 +9,10 @@ if command_exists terraform; then
   alias tf=terraform
 fi
 
+if command_exists terramate; then
+  alias tm=terramate
+fi
+
 if command_exists pulumi; then
   alias pl=pulumi
 fi
