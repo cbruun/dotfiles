@@ -58,7 +58,7 @@ last = log -1 HEAD --stat --abbrev-commit
 amend = commit --amend --no-edit
 
 # Amend the currently staged files to the latest commit, including unstaged files
-fix = commit -all --amend --no-edit
+fix = commit --all --amend --no-edit
 
 # Show all gitignored files
 others = ls-files --others --ignored --exclude-from=.gitignore
