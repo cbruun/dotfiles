@@ -4,7 +4,7 @@ compinit
 source ${ZDOTDIR}/common.zsh
 source ${ZDOTDIR}/.antidote/antidote.zsh
 
-# Antidoe plugin manager:
+# Antidote plugin manager:
 # Initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
 
@@ -49,8 +49,8 @@ precmd() {
   print -Pn "\e]0;Terminal %~\a"
 }
 
-source "${ZDOTDIR}/base_config/env.sh"
-source "${ZDOTDIR}/base_config/paths.sh"
+source "${ZDOTDIR}/base/env.sh"
+source "${ZDOTDIR}/base/paths.sh"
 
 source_if_exists "${ZDOTDIR}/custom_paths.zsh}"
 
@@ -60,6 +60,10 @@ source "${ZDOTDIR}/config/starship.zsh"
 source "${ZDOTDIR}/config/docker.zsh"
 source "${ZDOTDIR}/config/fnm.zsh"
 
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  source "${ZDOTDIR}/os/mac.zsh"
+fi
+
 if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
-  source "${ZDOTDIR}/config/wsl.zsh"
+  source "${ZDOTDIR}/os/wsl.zsh"
 fi

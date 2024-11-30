@@ -1,9 +1,10 @@
-alias zshconfig='code $ZDOTDIR $ZDOTDIR/.zshrc'
-alias zshplugins='code $ZDOTDIR/.zsh_plugins.txt'
+alias zshconfig='code $ZDOTDIR $ZDOTDIR/zshrc'
 alias dotfiles-edit='code $HOME/projects/dotfiles'
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-alias o=xdg-open
+if command_exists xdg-open; then
+  alias o=xdg-open
+fi
 
 if command_exists terraform; then
   alias tf=terraform
