@@ -1,4 +1,4 @@
-alias zshconfig='code $ZDOTDIR $ZDOTDIR/zshrc'
+alias zshconfig='code $ZDOTDIR $ZDOTDIR/.zshrc'
 alias dotfiles-edit='code $HOME/projects/dotfiles'
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
