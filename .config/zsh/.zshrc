@@ -56,10 +56,6 @@ source_if_exists "${ZDOTDIR}/custom_paths.zsh}"
 
 source "${ZDOTDIR}/config/aliases.zsh"
 
-source "${ZDOTDIR}/config/starship.zsh"
-source "${ZDOTDIR}/config/docker.zsh"
-source "${ZDOTDIR}/config/fnm.zsh"
-
 if [[ "$OSTYPE" == "darwin"* ]]; then
   source "${ZDOTDIR}/os/mac.zsh"
 fi
@@ -67,3 +63,7 @@ fi
 if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
   source "${ZDOTDIR}/os/wsl.zsh"
 fi
+
+source "${ZDOTDIR}/apps/starship.zsh"
+source "${ZDOTDIR}/apps/docker.zsh"
+source "${ZDOTDIR}/apps/fnm.zsh"
