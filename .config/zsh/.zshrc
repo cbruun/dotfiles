@@ -1,3 +1,6 @@
+# Remove Last Login that is always displayed on a Mac
+printf '\33c\e[3J'
+
 autoload -Uz compinit
 compinit
 
