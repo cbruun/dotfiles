@@ -18,3 +18,10 @@ update_time() {
     echo "Error: ntpdate command not found. Install package 'ntpsec'"
   fi
 }
+
+if [ -d ~/.asdf ]; then
+  source ~/.asdf/asdf.sh
+  fpath=(${ASDF_DIR}/completions $fpath)
+  # initialise completions with ZSH's compinit
+  autoload -Uz compinit && compinit
+fi
