@@ -57,8 +57,6 @@ source "${ZDOTDIR}/base/paths.sh"
 
 source_if_exists "${ZDOTDIR}/custom_paths.zsh}"
 
-source "${ZDOTDIR}/config/aliases.zsh"
-
 if [[ "$OSTYPE" == "darwin"* ]]; then
   source "${ZDOTDIR}/os/mac.zsh"
 fi
@@ -71,3 +69,6 @@ source "${ZDOTDIR}/apps/direnv.zsh"
 source "${ZDOTDIR}/apps/docker.zsh"
 source "${ZDOTDIR}/apps/fnm.zsh"
 source "${ZDOTDIR}/apps/starship.zsh"
+
+# Load aliases last to ensure all commands are available
+source "${ZDOTDIR}/config/aliases.zsh"
