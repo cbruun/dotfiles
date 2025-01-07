@@ -67,6 +67,7 @@ if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
   source "${ZDOTDIR}/os/wsl.zsh"
 fi
 
-source "${ZDOTDIR}/apps/starship.zsh"
+source "${ZDOTDIR}/apps/direnv.zsh"
 source "${ZDOTDIR}/apps/docker.zsh"
 source "${ZDOTDIR}/apps/fnm.zsh"
+source "${ZDOTDIR}/apps/starship.zsh"
