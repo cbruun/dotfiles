@@ -23,6 +23,9 @@ ff = only
 [gitweb]
 owner = "Casper Bruun"
 
+[credential]
+helper = manager
+
 [credential "https://dev.azure.com"]
 useHttpPath = true
 
