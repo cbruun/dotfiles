@@ -2,6 +2,9 @@
 name = Casper Bruun
 email = casperbruun@gmail.com
 
+[includeIf "gitdir:~/work/"]
+path = ~/.config/git/work-config
+
 [init]
 defaultBranch = main
 
