@@ -17,7 +17,4 @@ fi
 dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
 
-ANTIDOTE_LOCATION="${ZDOTDIR:-${XDG_CONFIG_HOME:-${HOME}/.config}/zsh}/.antidote"
-
-[ -d "${ANTIDOTE_LOCATION}" ] && rm -rf "${ANTIDOTE_LOCATION}"
-git clone --depth=1 https://github.com/mattmc3/antidote.git "${ANTIDOTE_LOCATION}"
+dotfiles submodule update --init --recursive --depth=1
