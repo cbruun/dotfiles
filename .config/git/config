@@ -1,6 +1,6 @@
 [user]
 name = Casper Bruun
-email = casperbruun@gmail.com
+email = cb@zck.sh
 
 [includeIf "gitdir:~/work/"]
 path = ~/.config/git/work-config
