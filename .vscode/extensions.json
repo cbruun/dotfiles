@@ -2,6 +2,7 @@
   "recommendations": [
     "EditorConfig.EditorConfig",
     "foxundermoon.shell-format",
+    "tamasfe.even-better-toml",
     "timonwong.shellcheck",
   ]
 }
