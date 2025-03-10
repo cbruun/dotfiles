@@ -30,10 +30,3 @@ command_exists() {
     return 1  # false
   fi
 }
-
-update_all() {
-  echo "Updating Starship..."
-  update_starship()
-  echo "Updating Antidote..."
-  antidote update
-}

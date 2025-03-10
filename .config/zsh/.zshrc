@@ -4,7 +4,7 @@ printf '\33c\e[3J'
 autoload -Uz compinit
 compinit
 
-source ${ZDOTDIR}/common.zsh
+source ${ZDOTDIR}/config/common.zsh
 source ${ZDOTDIR}/.antidote/antidote.zsh
 
 # Antidote plugin manager:
@@ -70,5 +70,8 @@ source "${ZDOTDIR}/apps/docker.zsh"
 source "${ZDOTDIR}/apps/fnm.zsh"
 source "${ZDOTDIR}/apps/starship.zsh"
 
-# Load aliases last to ensure all commands are available
+# Load aliases at the end to ensure all commands are available
 source "${ZDOTDIR}/config/aliases.zsh"
+
+# Depends on aliases, so load last
+source "${ZDOTDIR}/config/update.zsh"
