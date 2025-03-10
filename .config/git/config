@@ -2,9 +2,6 @@
 name = Casper Bruun
 email = cb@zck.sh
 
-[includeIf "gitdir:~/work/"]
-path = ~/.config/git/work-config
-
 [init]
 defaultBranch = main
 
@@ -32,6 +29,13 @@ helper = manager
 
 [credential "https://dev.azure.com"]
 useHttpPath = true
+
+[includeIf "gitdir:~/personal/"]
+path = ~/.config/git/config.wsl
+
+[includeIf "gitdir:~/work/"]
+path = ~/.config/git/config.work
+path = ~/.config/git/config.wsl
 
 [alias]
 a = add
