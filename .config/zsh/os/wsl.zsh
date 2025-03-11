@@ -5,7 +5,6 @@ alias proj="win && cd projects"
 alias o="explorer.exe"
 alias winget="winget.exe"
 alias java="java.exe"
-alias dotnet="dotnet.exe"
 alias op="op.exe"
 
 # Enable ssh-agent to remember passwords
