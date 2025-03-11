@@ -26,6 +26,8 @@ owner = "Casper Bruun"
 
 [credential]
 helper = manager
+# Fall back to no helper if credential-manager is not found. This eliminates an annoying warning.
+helper = ""
 
 [credential "https://dev.azure.com"]
 useHttpPath = true
