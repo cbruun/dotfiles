@@ -6,10 +6,29 @@
 
   "editor.mouseWheelScrollSensitivity": 2,
   "editor.fastScrollSensitivity": 3,
+  "editor.inlineSuggest.enabled": true,
+
+  "chat.agent.enabled": true,
 
   "diffEditor.ignoreTrimWhitespace": false,
 
+  "workbench.startupEditor": "none",
+
   "telemetry.telemetryLevel": "off",
 
-  "workbench.startupEditor": "none",
+  "git.enableSmartCommit": true,
+  "scm.workingSets.enabled": true,
+
+  "gitlens.launchpad.indicator.enabled": false,
+  "powershell.promptToUpdatePowerShell": false,
+
+  "[yaml]": {
+      "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 }
