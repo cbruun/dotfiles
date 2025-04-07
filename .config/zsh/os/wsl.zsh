@@ -18,9 +18,6 @@ update_time() {
   fi
 }
 
-if [ -d ~/.asdf ]; then
-  source ~/.asdf/asdf.sh
-  fpath=(${ASDF_DIR}/completions $fpath)
-  # initialise completions with ZSH's compinit
-  autoload -Uz compinit && compinit
-fi
+export PATH="${HOME}/go/bin:$PATH"
+export ASDF_DATA_DIR="$XDG_DATA_HOME"/asdf
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
