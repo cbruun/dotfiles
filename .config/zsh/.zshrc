@@ -65,6 +65,7 @@ if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
   source "${ZDOTDIR}/os/wsl.zsh"
 fi
 
+source "${ZDOTDIR}/apps/1password-ssh-agent.zsh"
 source "${ZDOTDIR}/apps/direnv.zsh"
 source "${ZDOTDIR}/apps/docker.zsh"
 source "${ZDOTDIR}/apps/fnm.zsh"
