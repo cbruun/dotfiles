@@ -24,6 +24,19 @@ ff = only
 [gitweb]
 owner = "Casper Bruun"
 
+# Commit signing using 1Password
+[user]
+signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOQJ/sUkLq0dPIfKKlC67bZ1UXvh2QGENtqiGFlYK5Z/
+
+[gpg]
+format = ssh
+
+[gpg "ssh"]
+program = "/opt/1Password/op-ssh-sign"
+
+[commit]
+gpgsign = true
+
 [credential]
 helper = manager
 # Fall back to no helper if credential-manager is not found. This eliminates an annoying warning.
