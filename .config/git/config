@@ -6,7 +6,7 @@ email = cb@zck.sh
 defaultBranch = main
 
 [core]
-editor = vim
+editor = nvim
 precomposeunicode = true
 
 [color]
