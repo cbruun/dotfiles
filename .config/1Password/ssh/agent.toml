@@ -1,0 +1,9 @@
+# 1Password SSH agent config.
+#
+# Examples can be found here:
+#  https://developer.1password.com/docs/ssh/agent/config
+[[ssh-keys]]
+vault = "Private"
+
+[[ssh-keys]]
+vault = "LGTM+"
