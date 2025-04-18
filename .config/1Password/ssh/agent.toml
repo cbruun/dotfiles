@@ -6,4 +6,4 @@
 vault = "Private"
 
 [[ssh-keys]]
-vault = "LGTM+"
+vault = "LGTM"
