@@ -27,6 +27,10 @@ if command_exists lazygit; then
   alias lg=lazygit
 fi
 
+if command_exists kubectl; then
+  alias k=kubectl
+fi
+
 # See https://sw.kovidgoyal.net/kitty/faq/#i-get-errors-about-the-terminal-being-unknown-or-opening-the-terminal-failing-or-functional-keys-like-arrow-keys-don-t-work
 if command_exists kitten && [[ "$TERMINFO" == *kitty/terminfo* ]]; then
   alias ssh="kitten ssh"
