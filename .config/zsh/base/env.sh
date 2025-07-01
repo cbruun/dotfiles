@@ -4,6 +4,7 @@ export CARGO_HOME="${XDG_DATA_HOME}"/cargo
 export RUSTUP_HOME="${XDG_DATA_HOME}"/rustup
 
 export DOCKER_CONFIG="${XDG_CONFIG_HOME}"/docker
+export KUBECONFIG="${XDG_CONFIG_HOME}"/kube/config
 
 export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}"/npm/npmrc
 export NPM_CONFIG_CACHE="${XDG_CACHE_HOME}"/npm
