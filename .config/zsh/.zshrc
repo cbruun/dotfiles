@@ -55,8 +55,6 @@ precmd() {
 source "${ZDOTDIR}/base/env.sh"
 source "${ZDOTDIR}/base/paths.sh"
 
-source_if_exists "${ZDOTDIR}/custom_paths.zsh}"
-
 if [[ "$OSTYPE" == "darwin"* ]]; then
   source "${ZDOTDIR}/os/mac.zsh"
 fi
@@ -68,7 +66,6 @@ fi
 source "${ZDOTDIR}/apps/1password-ssh-agent.zsh"
 source "${ZDOTDIR}/apps/direnv.zsh"
 source "${ZDOTDIR}/apps/docker.zsh"
-source "${ZDOTDIR}/apps/fnm.zsh"
 source "${ZDOTDIR}/apps/starship.zsh"
 
 # Load aliases at the end to ensure all commands are available

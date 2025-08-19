@@ -1,6 +1,5 @@
 # Project
 .dotfiles/
-.config/zsh/custom_paths.zsh
 
 # Shell history
 .bash_history
