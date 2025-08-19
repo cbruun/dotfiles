@@ -35,9 +35,7 @@ format = ssh
 gpgsign = true
 
 [credential]
-helper = manager
-# Fall back to no helper if credential-manager is not found. This eliminates an annoying warning.
-helper = ""
+helper = "!f() { if command -v git-credential-manager >/dev/null 2>&1; then exec git-credential-manager \"$@\"; else exit 0; fi; }; f"
 
 [credential "https://dev.azure.com"]
 useHttpPath = true
