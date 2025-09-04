@@ -1,6 +1,7 @@
 alias o=open
 
 export PATH="$PATH":/opt/homebrew/bin
+export HOMEBREW_NO_ENV_HINTS="1"
 
 local has_1p=false
 if command_exists brew && brew list --cask 1password >/dev/null 2>&1; then
