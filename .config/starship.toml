@@ -9,8 +9,14 @@ symbol = "  "
 [buf]
 symbol = " "
 
+[bun]
+symbol = " "
+
 [c]
 symbol = " "
+
+[cpp]
+symbol = " "
 
 [cmake]
 symbol = " "
@@ -23,6 +29,9 @@ symbol = " "
 
 [dart]
 symbol = " "
+
+[deno]
+symbol = " "
 
 [directory]
 read_only = " 󰌾"
@@ -41,6 +50,9 @@ symbol = " "
 
 [fossil_branch]
 symbol = " "
+
+[gcloud]
+symbol = "  "
 
 [git_branch]
 symbol = " "
@@ -155,6 +167,9 @@ symbol = " "
 [pijul_channel]
 symbol = " "
 
+[pixi]
+symbol = "󰏗 "
+
 [python]
 symbol = " "
 
@@ -178,3 +193,8 @@ symbol = " "
 
 [gradle]
 symbol = " "
+
+# Custom AI 1Password profile segment
+[env_var.AI_DEV_OP_PROFILE]
+format = '[\[🤖 $env_value\]]($style) '
+style = 'bold blue'
