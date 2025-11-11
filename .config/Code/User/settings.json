@@ -18,6 +18,7 @@
 
   "git.enableSmartCommit": true,
   "scm.workingSets.enabled": true,
+  "scm.defaultViewMode": "tree",
 
   "gitlens.launchpad.indicator.enabled": false,
   "powershell.promptToUpdatePowerShell": false,
@@ -31,4 +32,5 @@
   "[html]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "docker.extension.enableComposeLanguageServer": false,
 }
