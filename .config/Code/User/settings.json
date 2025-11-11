@@ -6,7 +6,8 @@
 
   "editor.mouseWheelScrollSensitivity": 2,
   "editor.fastScrollSensitivity": 3,
-  "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.enabled": false, // A keybind is configured to show suggestions
+  "editor.rulers": [120],
 
   "chat.agent.enabled": true,
 
@@ -20,6 +21,16 @@
   "scm.workingSets.enabled": true,
   "scm.defaultViewMode": "tree",
 
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.flox/**/manifest.lock": true
+  },
+
+  "workbench.colorCustomizations": {
+    // Make ruler white and transparent
+    "editorRuler.foreground": "#FFFFFF25"
+  },
+
   "gitlens.launchpad.indicator.enabled": false,
   "powershell.promptToUpdatePowerShell": false,
 
@@ -32,5 +43,7 @@
   "[html]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "docker.extension.enableComposeLanguageServer": false,
+  "[terraform]": {
+    "editor.formatOnSave": true
+  }
 }
