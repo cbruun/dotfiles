@@ -1,0 +1,42 @@
+[
+  {
+    // ReSharper-style Quick Fix menu when no inline prediction is active
+    "context": "Editor && !edit_prediction && !edit_prediction_conflict",
+    "bindings": {
+      "alt-enter": "editor::ToggleCodeActions"
+    }
+  },
+  {
+    // On-demand inline suggestions (Copilot/Zed/etc.)
+    "context": "Editor",
+    "bindings": {
+      "alt-\\": "editor::ShowEditPrediction",
+
+      // Navigation / search
+      "ctrl-t": "file_finder::Toggle",
+      "ctrl-shift-t": "project_symbols::Toggle"
+    }
+  },
+  {
+    // Accept prediction with Alt+Enter when visible
+    "context": "Editor && edit_prediction",
+    "bindings": {
+      "alt-enter": "editor::AcceptEditPrediction"
+    }
+  },
+  {
+    // Accept prediction even when it conflicts with completions/indent
+    "context": "Editor && edit_prediction_conflict",
+    "bindings": {
+      "alt-enter": "editor::AcceptEditPrediction"
+    }
+  },
+  {
+    // New file/folder in the Project panel (when focused)
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "ctrl-n": "project_panel::NewFile",
+      "ctrl-shift-n": "project_panel::NewDirectory"
+    }
+  }
+]

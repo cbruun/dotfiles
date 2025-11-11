@@ -1,0 +1,65 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "icon_theme": "Catppuccin Macchiato",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "agent": {
+    "enabled": true,
+    "button": true,
+    "model_parameters": []
+  },
+  "fast_scroll_sensitivity": 3.0,
+  "scroll_sensitivity": 2.0,
+  "minimap": {
+    "show": "auto"
+  },
+  "file_types": {},
+  "edit_predictions": {
+    "mode": "subtle"
+  },
+  "show_edit_predictions": true,
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_line_height": { "custom": 1.333 },
+  "buffer_font_size": 18.0,
+  "show_wrap_guides": true,
+  "wrap_guides": [120],
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "VSCode Dark Modern"
+  },
+  "languages": {
+    "Terraform": {
+      "format_on_save": "on" // Match your VS Code terraform format-on-save. :contentReference[oaicite:11]{index=11}
+    },
+    "YAML": {
+      "format_on_save": "on" // Use redhat/yaml server via Zed’s YAML support.
+    },
+    "Shell Script": {
+      "format_on_save": "off" // Often opinionated; disable if you prefer manual.
+    },
+    "Markdown": {
+      "remove_trailing_whitespace_on_save": false // Keeps trailing spaces when you need hard wraps. :contentReference[oaicite:12]{index=12}
+    },
+    "JSON": {
+      "format_on_save": "on" // JSONC/JSON format via built-ins/Prettier notes. :contentReference[oaicite:13]{index=13}
+    },
+    "TOML": {
+      "format_on_save": "on" // Uses Taplo formatter by default.
+    }
+  }
+}
