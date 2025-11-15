@@ -44,6 +44,7 @@ source "${ZDOTDIR}/apps/carapace.zsh"
 source "${ZDOTDIR}/apps/direnv.zsh"
 source "${ZDOTDIR}/apps/docker.zsh"
 source "${ZDOTDIR}/apps/starship.zsh"
+source "${ZDOTDIR}/apps/zoxide.zsh"
 
 # Load aliases at the end to ensure all commands are available
 source "${ZDOTDIR}/config/aliases.zsh"
