@@ -39,7 +39,8 @@ if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
 fi
 
 source "${ZDOTDIR}/apps/1password-ssh-agent.zsh"
-source "${ZDOTDIR}/apps/atuin.zsh"
+source "${ZDOTDIR}/apps/fzf.zsh"
+source "${ZDOTDIR}/apps/atuin.zsh" # load after fzf as they both try to bind ctrl + r to search history
 source "${ZDOTDIR}/apps/carapace.zsh"
 source "${ZDOTDIR}/apps/direnv.zsh"
 source "${ZDOTDIR}/apps/docker.zsh"
