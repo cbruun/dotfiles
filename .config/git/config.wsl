@@ -2,7 +2,7 @@
 helper = "!'/mnt/c/Program Files/Git/mingw64/bin/git-credential-manager.exe' $@"
 
 [gpg "ssh"]
-program = "/mnt/c/Users/cbr/AppData/Local/1Password/app/8/op-ssh-sign-wsl"
+program = "/mnt/c/Users/cbr/AppData/Local/Microsoft/WindowsApps/op-ssh-sign-wsl.exe"
 
 [core]
 sshCommand = "ssh.exe"
