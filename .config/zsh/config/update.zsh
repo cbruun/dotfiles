@@ -1,4 +1,4 @@
 update_dotfiles() {
-  dotfiles pull
-  dotfiles submodule update --init --recursive --remote --depth=1
+  dotfiles pull --recurse-submodules
+  antidote update
 }
