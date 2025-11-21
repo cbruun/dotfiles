@@ -18,9 +18,5 @@ update_time() {
   fi
 }
 
-export PATH="${HOME}/go/bin:$PATH"
-export ASDF_DATA_DIR="$XDG_DATA_HOME"/asdf
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-
 # Read by the nix-tools/ai-dev project
 export AI_DEV_DEFAULT_OP_PROFILE="employee"
