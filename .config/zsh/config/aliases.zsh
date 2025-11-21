@@ -33,6 +33,10 @@ if command_exists lazygit; then
   alias lg=lazygit
 fi
 
+if command_exists zellij; then
+  alias z=zellij
+fi
+
 if command_exists kubectl; then
   alias k=kubectl
 fi
