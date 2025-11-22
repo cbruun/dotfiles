@@ -12,6 +12,10 @@ if command_exists eza; then
   alias lt="eza -lh --group-directories-first --icons --tree --no-permissions --no-filesize --no-user --no-time"
 fi
 
+if command_exists git; then
+  alias g=git
+fi
+
 if command_exists terraform; then
   alias tf=terraform
 fi
