@@ -1,1 +1,3 @@
-eval "$(atuin init zsh --disable-up-arrow)"
+if command_exists atuin; then
+  eval "$(atuin init zsh --disable-up-arrow)"
+fi
