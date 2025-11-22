@@ -1,11 +1,17 @@
-style = "auto"            # visually better than compact
-inline_height = 30        # TUI lines
-enter_accept = false
+# Visual
+style = "compact"
+inline_height = 30
+
+# Behavior
+enter_accept = true
+ctrl_n_shortcuts = true
 
 filter_mode = "host"       # only search locally
 search_mode = "fuzzy"      # alternative: "prefix"
 db_prune = true            # keep DB lean over time
 
+filter_mode_shell_up_key_binding = "session"
+
 # Privacy / noise
 min_duration = 100         # in ms; ignore super-fast commands
-ignore_commands = ["ls", "pwd"]
+ignore_commands = ["cd", "ls", "pwd", "z"]
