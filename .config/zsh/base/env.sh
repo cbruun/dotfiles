@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Path to my personal nix-tools project
+export NIX_TOOLS_LOCATION="${HOME}/projects/nix-tools"
+
 export CARGO_HOME="${XDG_DATA_HOME}"/cargo
 export RUSTUP_HOME="${XDG_DATA_HOME}"/rustup
 

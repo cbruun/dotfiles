@@ -44,6 +44,7 @@ source "${ZDOTDIR}/apps/atuin.zsh" # load after fzf as they both try to bind ctr
 source "${ZDOTDIR}/apps/carapace.zsh"
 source "${ZDOTDIR}/apps/direnv.zsh"
 source "${ZDOTDIR}/apps/docker.zsh"
+source "${ZDOTDIR}/apps/nix-tools.zsh"
 source "${ZDOTDIR}/apps/starship.zsh"
 source "${ZDOTDIR}/apps/zoxide.zsh"
 

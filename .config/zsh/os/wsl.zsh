@@ -1,4 +1,3 @@
-alias home="cd ~/"
 alias win="cd /mnt/c/Users/cbr"
 alias proj="win && cd projects"
 
@@ -20,3 +19,4 @@ update_time() {
 
 # Read by the nix-tools/ai-dev project
 export AI_DEV_DEFAULT_OP_PROFILE="employee"
+export NIX_TOOLS_LOCATION="~/personal/nix-tools"
