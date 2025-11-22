@@ -1,0 +1,31 @@
+gui:
+  showRandomTip: false
+  showCommandLog: false
+  showBottomLine: true
+  nerdFontsVersion: "3"
+  showFileIcons: true
+
+git:
+  autoFetch: false
+  autoRefresh: true # keeps UI in sync locally
+  autoForwardBranches: onlyMainBranches
+  parseEmoji: true # render emojis in commit messages
+
+  log:
+    order: topo-order
+    showGraph: always
+    showWholeGraph: false
+
+os:
+  edit: "$EDITOR {{filename}}"
+  editAtLine: "$EDITOR +{{line}} {{filename}}"
+  editAtLineAndWait: ""
+  editInTerminal: true
+  openDirInEditor: "$EDITOR {{dir}}"
+
+notARepository: skip # skip prompt for creating new repo
+
+confirmOnQuit: false
+quitOnTopLevelReturn: false
+disableStartupPopups: true
+promptToReturnFromSubprocess: true
