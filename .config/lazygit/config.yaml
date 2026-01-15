@@ -2,19 +2,44 @@ gui:
   showRandomTip: false
   showCommandLog: false
   showBottomLine: true
-  nerdFontsVersion: "3"
   showFileIcons: true
+  nerdFontsVersion: "3"
+  language: "auto"
+  theme:
+    activeBorderColor:
+      - cyan
+      - bold
+    inactiveBorderColor:
+      - default
+    optionsTextColor:
+      - blue
+    selectedLineBgColor:
+      - default
+    selectedRangeBgColor:
+      - reverse
+  filterMode: substring
+  timeFormat: "2006-01-02 15:04"
 
 git:
-  autoFetch: false
-  autoRefresh: true # keeps UI in sync locally
+  autoFetch: true
+  autoRefresh: true
   autoForwardBranches: onlyMainBranches
-  parseEmoji: true # render emojis in commit messages
+  parseEmoji: true
 
   log:
     order: topo-order
     showGraph: always
     showWholeGraph: false
+
+  commit:
+    signOff: false
+    autoWrapCommitMessage: true
+  merging:
+    manualCommit: false
+  paging:
+    colorArg: always
+    pager: ""
+  branchLogCmd: "git log --color=always --graph --decorate --oneline {{branchName}} --"
 
 os:
   edit: "$EDITOR {{filename}}"
@@ -23,7 +48,8 @@ os:
   editInTerminal: true
   openDirInEditor: "$EDITOR {{dir}}"
 
-notARepository: skip # skip prompt for creating new repo
+# Skip prompt asking to create a new repo
+notARepository: skip
 
 confirmOnQuit: false
 quitOnTopLevelReturn: false
