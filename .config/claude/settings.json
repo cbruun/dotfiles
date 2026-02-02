@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch",
+      "WebSearch",
+
+      "Bash(cat *)",
+      "Bash(cp *)",
+      "Bash(curl *)",
+      "Bash(find *)",
+      "Bash(grep *)",
+      "Bash(jq *)",
+      "Bash(ls *)",
+      "Bash(mkdir *)",
+      "Bash(pwd *)",
+      "Bash(rg *)",
+      "Bash(sed *)",
+      "Bash(tree *)",
+      "Bash(uname *)",
+      "Bash(whoami *)"
+    ],
+    "ask": [],
+    "deny": []
+  }
+}
