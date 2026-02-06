@@ -1,7 +1,7 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "theme": "catppuccin",
-  "model": "openai/gpt-5.2-codex",
+  "model": "openai/gpt-5.3-codex",
   "small_model": "openai/gpt-5-nano",
   "autoupdate": false,
   "keybinds": {
@@ -12,27 +12,34 @@
     "doom_loop": "ask",
     "external_directory": "ask",
     "webfetch": "allow",
-
     "bash": {
       "*": "ask",
 
-      // "safe" commands = auto-allow
-      "ls *": "allow",
-      "pwd": "allow",
-      "find *": "allow",
-      "mkdir *": "allow",
+      // "safe" commands
+      "cat *": "allow",
       "cp *": "allow",
       "curl *": "allow",
-      "cat *": "allow",
-      "sed *": "allow",
+      "find *": "allow",
       "grep *": "allow",
-      "tree *": "allow",
       "jq *": "allow",
+      "ls *": "allow",
+      "mkdir *": "allow",
+      "pwd *": "allow",
+      "rg *": "allow",
+      "sed *": "allow",
+      "tree *": "allow",
+      "uname *": "allow",
+      "whoami *": "allow",
+
       "flox *": "allow",
 
-      // Terraform: allow, but never apply
+      // Terraform: allow, but never apply changes
       "terraform *": "ask",
       "terraform apply*": "deny",
+
+      // Pulumi: allow, but never apply changes
+      "pulumi *": "allow",
+      "pulumi up *": "deny",
     },
   },
 }
