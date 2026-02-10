@@ -46,6 +46,7 @@ source "${ZDOTDIR}/apps/direnv.zsh"
 source "${ZDOTDIR}/apps/docker.zsh"
 source "${ZDOTDIR}/apps/nix-tools.zsh"
 source "${ZDOTDIR}/apps/starship.zsh"
+source "${ZDOTDIR}/apps/worktrunk.zsh"
 source "${ZDOTDIR}/apps/zoxide.zsh"
 
 # Load aliases at the end to ensure all commands are available
