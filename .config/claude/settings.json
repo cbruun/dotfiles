@@ -1,25 +1,42 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+
   "permissions": {
     "allow": [
+      "Read",
+
+      "Bash(column *)",
+      "Bash(find *)",
+      "Bash(ls *)",
+      "Bash(pwd *)",
+      "Bash(sort *)",
+      "Bash(tree *)",
+      "Bash(uname *)",
+      "Bash(uniq *)",
+      "Bash(wc *)",
+      "Bash(whoami *)"
+    ],
+    "ask": [
       "WebFetch",
       "WebSearch",
 
+      "Bash(awk *)",
+      "Bash(base64 *)",
       "Bash(cat *)",
       "Bash(cp *)",
-      "Bash(curl *)",
-      "Bash(find *)",
+      "Bash(diff *)",
+      "Bash(echo *)",
       "Bash(grep *)",
+      "Bash(head *)",
       "Bash(jq *)",
-      "Bash(ls *)",
       "Bash(mkdir *)",
-      "Bash(pwd *)",
       "Bash(rg *)",
       "Bash(sed *)",
-      "Bash(tree *)",
-      "Bash(uname *)",
-      "Bash(whoami *)"
+      "Bash(tail *)",
+      "Bash(yq *)",
+
+      "Bash(curl *)"
     ],
-    "ask": [],
     "deny": []
   }
 }
