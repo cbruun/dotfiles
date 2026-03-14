@@ -1,45 +1,47 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "theme": "catppuccin",
   "model": "openai/gpt-5.3-codex",
   "small_model": "openai/gpt-5-nano",
   "autoupdate": false,
-  "keybinds": {
-    "command_list": "ctrl+alt+p",
-  },
   "permission": {
     "edit": "ask",
     "doom_loop": "ask",
     "external_directory": "ask",
-    "webfetch": "allow",
+    "webfetch": "ask",
     "bash": {
+      // default to ask
       "*": "ask",
 
-      // "safe" commands
-      "cat *": "allow",
-      "cp *": "allow",
-      "curl *": "allow",
+      // allow: metadata / low-risk inspection
+      "column *": "allow",
       "find *": "allow",
-      "grep *": "allow",
-      "jq *": "allow",
       "ls *": "allow",
-      "mkdir *": "allow",
       "pwd *": "allow",
-      "rg *": "allow",
-      "sed *": "allow",
+      "sort *": "allow",
       "tree *": "allow",
       "uname *": "allow",
+      "uniq *": "allow",
+      "wc *": "allow",
       "whoami *": "allow",
 
-      "flox *": "allow",
+      // ask: reads / writes / extraction / transforms
+      "awk *": "ask",
+      "base64 *": "ask",
+      "cat *": "ask",
+      "cp *": "ask",
+      "diff *": "ask",
+      "echo *": "ask",
+      "grep *": "ask",
+      "head *": "ask",
+      "jq *": "ask",
+      "mkdir *": "ask",
+      "rg *": "ask",
+      "sed *": "ask",
+      "tail *": "ask",
+      "yq *": "ask",
 
-      // Terraform: allow, but never apply changes
-      "terraform *": "ask",
-      "terraform apply*": "deny",
-
-      // Pulumi: allow, but never apply changes
-      "pulumi *": "allow",
-      "pulumi up *": "deny",
+      // ask: network
+      "curl *": "ask",
     },
   },
 }
