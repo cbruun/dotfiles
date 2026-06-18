@@ -21,4 +21,7 @@ dotfiles config --local status.showUntrackedFiles no
 # Mark the repo as not bare, otherwise `git submodule` refuses to run.
 dotfiles config --local core.bare false
 
-dotfiles submodule update --init --recursive --depth=1
+# `git submodule` resolves the work tree relative to the current directory, so
+# run it from $HOME (the work tree) in a subshell, leaving the caller's CWD
+# untouched. The script may be invoked from anywhere.
+(cd "${HOME}" && dotfiles submodule update --init --recursive --depth=1)
