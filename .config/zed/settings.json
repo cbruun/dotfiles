@@ -4,7 +4,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "VSCode Dark Modern"
+    "dark": "VSCode Dark Modern",
   },
 
   // Fonts
@@ -16,18 +16,23 @@
   // Privacy
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
 
   // AI
   "agent": {
+    "dock": "right",
+    "sidebar_side": "right",
     "enabled": true,
     "button": true,
-    "model_parameters": []
+    "model_parameters": [],
   },
+
   "edit_predictions": {
-    "mode": "subtle"
+    "provider": "copilot",
+    "mode": "subtle",
   },
+
   "show_edit_predictions": true,
 
   // Keybinds
@@ -36,44 +41,53 @@
   // UI
   "fast_scroll_sensitivity": 3.0,
   "scroll_sensitivity": 2.0,
-
   "minimap": {
-    "show": "auto"
+    "show": "auto",
   },
-
   "show_wrap_guides": true,
   "wrap_guides": [120],
 
-  // Git
+  // UI - panels
   "git_panel": {
-    "tree_view": true
+    "dock": "left",
+    "tree_view": true,
+  },
+
+  "project_panel": {
+    "dock": "left",
+  },
+
+  "outline_panel": {
+    "dock": "left",
+  },
+
+  "collaboration_panel": {
+    "dock": "left",
   },
 
   // Others
+  "cli_default_open_behavior": "existing_window",
   "file_types": {},
-  "features": {
-    "edit_prediction_provider": "copilot"
-  },
 
   // Language specific
   "languages": {
     "Terraform": {
-      "format_on_save": "on" // Match your VS Code terraform format-on-save. :contentReference[oaicite:11]{index=11}
+      "format_on_save": "on", // Match your VS Code terraform format-on-save. :contentReference[oaicite:11]{index=11}
     },
     "YAML": {
-      "format_on_save": "on" // Use redhat/yaml server via Zed’s YAML support.
+      "format_on_save": "on", // Use redhat/yaml server via Zed’s YAML support.
     },
     "Shell Script": {
-      "format_on_save": "off" // Often opinionated; disable if you prefer manual.
+      "format_on_save": "off", // Often opinionated; disable if you prefer manual.
     },
     "Markdown": {
-      "remove_trailing_whitespace_on_save": false // Keeps trailing spaces when you need hard wraps. :contentReference[oaicite:12]{index=12}
+      "remove_trailing_whitespace_on_save": false, // Keeps trailing spaces when you need hard wraps. :contentReference[oaicite:12]{index=12}
     },
     "JSON": {
-      "format_on_save": "on" // JSONC/JSON format via built-ins/Prettier notes. :contentReference[oaicite:13]{index=13}
+      "format_on_save": "on", // JSONC/JSON format via built-ins/Prettier notes. :contentReference[oaicite:13]{index=13}
     },
     "TOML": {
-      "format_on_save": "on" // Uses Taplo formatter by default.
-    }
-  }
+      "format_on_save": "on", // Uses Taplo formatter by default.
+    },
+  },
 }
