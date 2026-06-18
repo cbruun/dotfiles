@@ -17,4 +17,8 @@ fi
 dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
 
+# `git clone --bare` flags the repo bare, but it actually has a working tree ($HOME).
+# Mark the repo as not bare, otherwise `git submodule` refuses to run.
+dotfiles config --local core.bare false
+
 dotfiles submodule update --init --recursive --depth=1
