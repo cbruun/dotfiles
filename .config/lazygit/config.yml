@@ -1,10 +1,16 @@
 gui:
+  mouseEvents: false
   showRandomTip: false
   showCommandLog: false
   showBottomLine: true
   showFileIcons: true
   nerdFontsVersion: "3"
   language: "auto"
+  filterMode: fuzzy
+  timeFormat: "2006-01-02 15:04"
+
+  # Catpuccin Mocha theme
+  # See https://github.com/catppuccin/lazygit
   theme:
     activeBorderColor:
       - "#cba6f7"
@@ -33,14 +39,13 @@ gui:
       - "#cdd6f4"
   authorColors:
     "*": "#b4befe"
-  filterMode: fuzzy
-  timeFormat: "2006-01-02 15:04"
 
 git:
   autoFetch: true
   autoRefresh: true
   autoForwardBranches: onlyMainBranches
   parseEmoji: true
+  skipHookPrefix: "wip"
 
   log:
     order: topo-order
@@ -50,12 +55,14 @@ git:
   commit:
     signOff: false
     autoWrapCommitMessage: true
-    skipHookPrefix: "wip"
+
   merging:
     manualCommit: false
-  paging:
-    colorArg: always
-    pager: "delta --paging=never"
+
+  pagers:
+    - colorArg: always
+      pager: "delta --paging=never"
+
   branchLogCmd: "git log --color=always --graph --decorate --oneline {{branchName}} --"
 
 os:
@@ -72,3 +79,23 @@ confirmOnQuit: false
 quitOnTopLevelReturn: false
 disableStartupPopups: true
 promptToReturnFromSubprocess: true
+
+customCommands:
+  - key: "<c-p>"
+    context: "localBranches"
+    description: "Open PR in browser"
+    command: "gh pr view --web {{.SelectedLocalBranch.Name}}"
+  - key: "<c-n>"
+    context: "localBranches"
+    description: "Create PR"
+    command: "gh pr create --web"
+  - key: "<c-s>"
+    context: "localBranches"
+    description: "View PR status"
+    command: "gh pr status"
+    output: terminal
+  - key: "<c-k>"
+    context: "localBranches"
+    description: "View PR checks"
+    command: "gh pr checks {{.SelectedLocalBranch.Name}}"
+    output: terminal
