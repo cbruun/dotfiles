@@ -33,6 +33,7 @@ gui:
       - "#cdd6f4"
   authorColors:
     "*": "#b4befe"
+  filterMode: fuzzy
   timeFormat: "2006-01-02 15:04"
 
 git:
@@ -49,11 +50,12 @@ git:
   commit:
     signOff: false
     autoWrapCommitMessage: true
+    skipHookPrefix: "wip"
   merging:
     manualCommit: false
   paging:
     colorArg: always
-    pager: ""
+    pager: "delta --paging=never"
   branchLogCmd: "git log --color=always --graph --decorate --oneline {{branchName}} --"
 
 os:
