@@ -7,17 +7,32 @@ gui:
   language: "auto"
   theme:
     activeBorderColor:
-      - cyan
+      - "#cba6f7"
       - bold
     inactiveBorderColor:
-      - default
+      - "#a6adc8"
+    searchingActiveBorderColor:
+      - "#f9e2af"
     optionsTextColor:
-      - blue
+      - "#89b4fa"
     selectedLineBgColor:
-      - default
-    selectedRangeBgColor:
-      - reverse
-  filterMode: substring
+      - "#313244"
+    inactiveViewSelectedLineBgColor:
+      - "#6c7086"
+    cherryPickedCommitFgColor:
+      - "#cba6f7"
+    cherryPickedCommitBgColor:
+      - "#45475a"
+    markedBaseCommitFgColor:
+      - "#89b4fa"
+    markedBaseCommitBgColor:
+      - "#f9e2af"
+    unstagedChangesColor:
+      - "#f38ba8"
+    defaultFgColor:
+      - "#cdd6f4"
+  authorColors:
+    "*": "#b4befe"
   timeFormat: "2006-01-02 15:04"
 
 git:
