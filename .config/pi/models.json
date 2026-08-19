@@ -1,0 +1,33 @@
+{
+  "providers": {
+    "zeldoc": {
+      "baseUrl": "https://api.zeldoc.ai/v1",
+      "api": "openai-completions",
+      "apiKey": "$ZELDOC_API_KEY",
+      "compat": {
+        "supportsDeveloperRole": false,
+        "supportsReasoningEffort": true,
+        "maxTokensField": "max_tokens"
+      },
+      "models": [
+        {
+          "id": "zdev",
+          "name": "ZDev",
+          "reasoning": true,
+          "input": ["text"],
+          "contextWindow": 1000000,
+          "maxTokens": 131072,
+          "thinkingLevelMap": {
+            "off": null,
+            "minimal": null,
+            "low": null,
+            "medium": null,
+            "high": "high",
+            "xhigh": null,
+            "max": "max"
+          }
+        }
+      ]
+    }
+  }
+}

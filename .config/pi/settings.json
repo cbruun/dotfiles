@@ -1,0 +1,7 @@
+{
+  "defaultProvider": "zeldoc",
+  "defaultModel": "zdev",
+  "defaultThinkingLevel": "high",
+
+  "extensions": ["~/projects/pi/extensions"]
+}
