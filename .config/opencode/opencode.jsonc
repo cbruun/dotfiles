@@ -13,7 +13,7 @@
       },
       "models": {
         "zeldoc/zdev": {
-          "name": "zdev",
+          "name": "ZDev",
           "attachment": false,
           "reasoning": true,
           "tool_call": true,
