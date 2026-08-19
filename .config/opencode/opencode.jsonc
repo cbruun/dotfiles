@@ -67,7 +67,7 @@
       "git blame *": "allow",
       "git ls-files": "allow",
       "git ls-files *": "allow",
-      // bare-only: with args these mutate (create branch/tag/remote)
+      // -> bare-only: with args these mutate (create branch/tag/remote)
       "git branch": "allow",
       "git tag": "allow",
       "git remote": "allow",
@@ -120,6 +120,17 @@
 
       // network
       "curl *": "ask",
+
+      // env / shell variable exposure
+      "declare": "deny",
+      "env": "deny",
+      "export": "deny",
+      // -> allow setting agent controlled variables
+      "export *": "allow",
+      "printenv": "deny",
+      "printenv *": "deny",
+      "set": "deny",
+      "typeset": "deny",
     },
   },
 }
