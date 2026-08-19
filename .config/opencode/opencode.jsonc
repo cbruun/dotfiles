@@ -1,18 +1,8 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "zeldoc/glm-5.2",
-  "small_model": "zeldoc/glm-5.2",
+  "model": "zeldoc/zdev",
+  "small_model": "zeldoc/zdev",
   "autoupdate": false,
-  "agent": {
-    "title": {
-      "model": "zeldoc/glm-5.2",
-      "variant": "low",
-    },
-    "summary": {
-      "model": "zeldoc/glm-5.2",
-      "variant": "low",
-    },
-  },
   "provider": {
     "zeldoc": {
       "npm": "@ai-sdk/openai-compatible",
@@ -22,8 +12,8 @@
         "apiKey": "{env:ZELDOC_API_KEY}",
       },
       "models": {
-        "zeldoc/glm-5.2": {
-          "name": "GLM-5.2",
+        "zeldoc/zdev": {
+          "name": "zdev",
           "attachment": false,
           "reasoning": true,
           "tool_call": true,
@@ -40,12 +30,6 @@
             "reasoning_effort": "high",
           },
           "variants": {
-            "low": {
-              "reasoningEffort": "low",
-            },
-            "medium": {
-              "reasoningEffort": "medium",
-            },
             "high": {
               "reasoningEffort": "high",
             },
