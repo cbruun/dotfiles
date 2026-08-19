@@ -62,7 +62,9 @@
       "Bash(rg *)",
       "Bash(tail)",
       "Bash(tail *)",
-      "Bash(yq *)"
+      "Bash(yq *)",
+
+      "Bash(export *)"
     ],
     "ask": [
       "Bash(cp *)",
@@ -72,6 +74,14 @@
 
       "Bash(curl *)"
     ],
-    "deny": []
+    "deny": [
+      "Bash(declare)",
+      "Bash(env)",
+      "Bash(export)",
+      "Bash(printenv)",
+      "Bash(printenv *)",
+      "Bash(set)",
+      "Bash(typeset)"
+    ]
   }
 }
