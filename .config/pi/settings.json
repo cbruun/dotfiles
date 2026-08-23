@@ -1,7 +1,11 @@
 {
+  "theme": "dark",
+
   "defaultProvider": "zeldoc",
   "defaultModel": "zdev",
   "defaultThinkingLevel": "high",
+
+  "hideThinkingBlock": false,
 
   "extensions": ["~/projects/pi/extensions"]
 }
