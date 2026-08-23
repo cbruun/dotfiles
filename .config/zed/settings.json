@@ -72,22 +72,22 @@
   // Language specific
   "languages": {
     "Terraform": {
-      "format_on_save": "on", // Match your VS Code terraform format-on-save. :contentReference[oaicite:11]{index=11}
+      "format_on_save": "on",
     },
     "YAML": {
-      "format_on_save": "on", // Use redhat/yaml server via Zed’s YAML support.
+      "format_on_save": "on",
     },
     "Shell Script": {
-      "format_on_save": "off", // Often opinionated; disable if you prefer manual.
+      "format_on_save": "off",
     },
     "Markdown": {
-      "remove_trailing_whitespace_on_save": false, // Keeps trailing spaces when you need hard wraps. :contentReference[oaicite:12]{index=12}
+      "remove_trailing_whitespace_on_save": false,
     },
     "JSON": {
-      "format_on_save": "on", // JSONC/JSON format via built-ins/Prettier notes. :contentReference[oaicite:13]{index=13}
+      "format_on_save": "on",
     },
     "TOML": {
-      "format_on_save": "on", // Uses Taplo formatter by default.
+      "format_on_save": "on",
     },
   },
 }
