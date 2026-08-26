@@ -50,6 +50,7 @@
   // UI - panels
   "git_panel": {
     "dock": "left",
+    "group_by": "staging",
     "tree_view": true,
   },
 
