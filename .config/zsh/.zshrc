@@ -27,8 +27,6 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
 source "${ZDOTDIR}/config/keybinds.zsh"
-source "${ZDOTDIR}/base/env.sh"
-source "${ZDOTDIR}/base/paths.sh"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   source "${ZDOTDIR}/os/mac.zsh"
