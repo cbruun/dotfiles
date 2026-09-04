@@ -2,7 +2,7 @@
   "theme": "dark",
 
   "defaultProvider": "zeldoc",
-  "defaultModel": "zdev",
+  "defaultModel": "zdev-2",
   "defaultThinkingLevel": "high",
 
   "hideThinkingBlock": false,
