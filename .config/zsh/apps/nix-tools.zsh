@@ -1,3 +1,5 @@
+# Convenience wrapper for the nix-tools ai-dev project. It activates its flox environment from
+# anywhere. Anything but plain activation is delegated to the project's own entry point.
 function ai {
   if ! command_exists flox; then
     echo "Error: flox command not found"
@@ -10,26 +12,10 @@ function ai {
     return 1
   fi
 
-  case "$1" in
-    --upgrade)
-      echo "Upgrading AI dev tools..."
-      # Create a subshell to avoid cd affecting the current location
-      (
-        cd "${NIX_TOOLS_LOCATION}/ai-dev"
-        git restore .flox/env/manifest.toml
-        git pull
-        flox upgrade
-      )
-      return $?
-      ;;
-    --*)
-      # Catch any unrecognized flags
-      echo "Error: Unknown option $1"
-      echo "Usage: ai [--upgrade]"
-      return 1
-      ;;
-    *)
-      flox activate -d "${NIX_TOOLS_LOCATION}/ai-dev"
-      ;;
-  esac
+  if [[ $# -gt 0 ]]; then
+    "$NIX_TOOLS_LOCATION/ai-dev/scripts/ai.sh" "$@"
+    return $?
+  fi
+
+  flox activate -d "${NIX_TOOLS_LOCATION}/ai-dev"
 }
