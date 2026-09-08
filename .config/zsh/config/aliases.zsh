@@ -7,9 +7,9 @@ if command_exists xdg-open; then
 fi
 
 if command_exists eza; then
-  alias ls="eza --group-directories-first --icons"
-  alias ll="eza -lh --group-directories-first --icons --smart-group"
-  alias lt="eza -lh --group-directories-first --icons --tree --no-permissions --no-filesize --no-user --no-time"
+  alias ls="eza --group-directories-first --icons=always"
+  alias ll="eza -lh --group-directories-first --icons=always --smart-group"
+  alias lt="eza -lh --group-directories-first --icons=always --tree --no-permissions --no-filesize --no-user --no-time"
 fi
 
 if command_exists terraform; then
