@@ -14,23 +14,6 @@
           "id": "zdev",
           "name": "ZDev",
           "reasoning": true,
-          "input": ["text"],
-          "contextWindow": 1000000,
-          "maxTokens": 131072,
-          "thinkingLevelMap": {
-            "off": null,
-            "minimal": null,
-            "low": null,
-            "medium": null,
-            "high": "high",
-            "xhigh": null,
-            "max": "max"
-          }
-        },
-        {
-          "id": "zdev-2",
-          "name": "ZDev Flash",
-          "reasoning": true,
           "input": ["text", "image"],
           "contextWindow": 1000000,
           "maxTokens": 131072,
