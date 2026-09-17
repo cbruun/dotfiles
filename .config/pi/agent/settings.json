@@ -7,5 +7,5 @@
 
   "hideThinkingBlock": false,
 
-  "extensions": ["~/projects/pi/extensions"]
+  "packages": ["git:git@github.com:cbruun/pi"]
 }
