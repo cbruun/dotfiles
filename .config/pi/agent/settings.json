@@ -7,5 +7,5 @@
 
   "hideThinkingBlock": false,
 
-  "packages": ["git:git@github.com:cbruun/pi"]
+  "packages": ["git:git@github.com:cbruun/pi@03b3c35"]
 }
