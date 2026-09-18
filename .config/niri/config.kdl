@@ -123,6 +123,9 @@ binds {
   Mod+Ctrl+K     { move-window-up; }
   Mod+Ctrl+L     { move-column-right; }
 
+  Mod+Alt+Left  { consume-or-expel-window-left; }
+  Mod+Alt+Right { consume-or-expel-window-right; }
+
   // Focus the adjacent monitor.
   Mod+Shift+Left  { focus-monitor-left; }
   Mod+Shift+Down  { focus-monitor-down; }
@@ -173,7 +176,7 @@ binds {
   Mod+8 { focus-workspace 8; }
   Mod+9 { focus-workspace 9; }
 
-  // Move to workspace.
+  // Move column to workspace.
   Mod+Ctrl+1 { move-column-to-workspace 1; }
   Mod+Ctrl+2 { move-column-to-workspace 2; }
   Mod+Ctrl+3 { move-column-to-workspace 3; }
@@ -183,6 +186,10 @@ binds {
   Mod+Ctrl+7 { move-column-to-workspace 7; }
   Mod+Ctrl+8 { move-column-to-workspace 8; }
   Mod+Ctrl+9 { move-column-to-workspace 9; }
+
+  // Move column to workspace up or down.
+  Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
+  Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
 
   // Sizing, layout, and session controls.
   Mod+R       { switch-preset-column-width; }
