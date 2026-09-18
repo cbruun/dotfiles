@@ -1,0 +1,64 @@
+[theme]
+mode = "dark"
+source = "builtin"
+builtin = "Catppuccin"
+
+[shell]
+# 1Password system authentication and CLI integration require a Polkit agent.
+polkit_agent = true
+
+[shell.launcher]
+pinned = [
+  "org.mozilla.firefox",
+  "kitty",
+  "dev.zed.Zed",
+  "org.gnome.Nautilus",
+  "com.onepassword.OnePassword",
+  "code",
+]
+
+[bar.main]
+# Use the full width of each monitor instead of inset end margins.
+margin_ends = 0
+margin_edge = 0
+shadow = false
+concave_edge_corners = false
+radius_top_left = 0
+radius_top_right = 0
+radius_bottom_left = 0
+radius_bottom_right = 0
+
+# Omit the MPRIS/"Now Playing" widget.
+end = [
+  "tray",
+  "notifications",
+  "clipboard",
+  "network",
+  "bluetooth",
+  "volume",
+  "brightness",
+  "battery",
+  "control-center",
+  "session",
+]
+
+# Only show workspace navigation on the side monitors.
+[bar.main.monitor.dp2]
+match = "DP-2"
+start = ["workspaces"]
+center = []
+end = []
+
+[bar.main.monitor.dp3]
+match = "DP-3"
+start = ["workspaces"]
+center = []
+end = []
+
+[hooks]
+# 1Password UI does not support Niri's auto-lock backend, so lock it explicitly.
+session_locked = """
+  if pgrep -x 1password >/dev/null; then
+    1password --lock >/dev/null 2>&1
+  fi
+"""
