@@ -1,1 +1,195 @@
+// Launch Noctalia at startup.
 spawn-at-startup "noctalia"
+
+input {
+  touchpad {
+    accel-speed 0.7
+  }
+
+  // Use the mouse's hardware DPI directly and do not apply acceleration. Omit accel-speed
+  // so the device's own sensitivity remains in control.
+  mouse {
+    accel-profile "flat"
+  }
+}
+
+layout {
+  // Keep the active highlight, but do not outline unfocused windows.
+  focus-ring {
+    inactive-color "#00000000"
+  }
+}
+
+// Three 2560x1440 monitors, arranged left-to-right as DP-2, DP-1, DP-3.
+// Omitting the refresh rate selects the highest available rate for that resolution.
+output "DP-2" {
+  mode "2560x1440"
+  scale 1
+  position x=0 y=0
+}
+
+output "DP-1" {
+  mode "2560x1440"
+  scale 1
+  position x=2560 y=0
+  focus-at-startup
+}
+
+output "DP-3" {
+  mode "2560x1440"
+  scale 1
+  position x=5120 y=0
+}
+
+// Render square tiled-window corners.
+window-rule {
+  match is-floating=false
+  tiled-state true
+}
+
+// Noctalia's settings window needs to float, and this allows its notification actions and window
+// activation to work with Niri.
+window-rule {
+  match app-id="dev.noctalia.Noctalia"
+  open-floating true
+  default-column-width { fixed 1080; }
+  default-window-height { fixed 920; }
+}
+
+// Keep 1Password windows focused and floating, including authorization prompts.
+window-rule {
+  match app-id=r#"^(1[pP]assword|com\.onepassword\.OnePassword)$"#
+  open-floating true
+  open-focused true
+}
+
+debug {
+  honor-xdg-activation-with-invalid-serial
+}
+
+// Use Niri's native Alt-Tab switcher instead of Noctalia's overlay.
+recent-windows {
+  binds {
+    Alt+Tab       { next-window scope="workspace"; }
+    Alt+Shift+Tab { previous-window scope="workspace"; }
+  }
+}
+
+binds {
+  // Show available hotkeys.
+  Mod+Slash { show-hotkey-overlay; }
+  Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+  // Application shortcuts.
+  Mod+T     hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+  Mod+E     hotkey-overlay-title="Open Files" { spawn "nautilus"; }
+  Mod+Space hotkey-overlay-title="Open Launcher: Noctalia" { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
+  Mod+S     hotkey-overlay-title="Open Control Center: Noctalia" { spawn "noctalia" "msg" "panel-toggle" "control-center"; }
+  Mod+Comma hotkey-overlay-title="Open Settings: Noctalia" { spawn "noctalia" "msg" "settings-toggle"; }
+
+  // Use logind so Noctalia and other applications receive the system lock event.
+  Super+Alt+L repeat=false hotkey-overlay-title="Lock the Screen" { spawn "loginctl" "lock-session"; }
+
+  // Pass volume and brightness control to Noctalia.
+  XF86AudioRaiseVolume  allow-when-locked=true { spawn "noctalia" "msg" "volume-up"; }
+  XF86AudioLowerVolume  allow-when-locked=true { spawn "noctalia" "msg" "volume-down"; }
+  XF86AudioMute         allow-when-locked=true { spawn "noctalia" "msg" "volume-mute"; }
+  XF86MonBrightnessUp   allow-when-locked=true { spawn "noctalia" "msg" "brightness-up"; }
+  XF86MonBrightnessDown allow-when-locked=true { spawn "noctalia" "msg" "brightness-down"; }
+
+  // Overview and window management.
+  Mod+O repeat=false { toggle-overview; }
+  Mod+Q repeat=false { close-window; }
+
+  Mod+Left  { focus-column-left; }
+  Mod+Down  { focus-window-down; }
+  Mod+Up    { focus-window-up; }
+  Mod+Right { focus-column-right; }
+  Mod+H     { focus-column-left; }
+  Mod+J     { focus-window-down; }
+  Mod+K     { focus-window-up; }
+  Mod+L     { focus-column-right; }
+
+  Mod+Ctrl+Left  { move-column-left; }
+  Mod+Ctrl+Down  { move-window-down; }
+  Mod+Ctrl+Up    { move-window-up; }
+  Mod+Ctrl+Right { move-column-right; }
+  Mod+Ctrl+H     { move-column-left; }
+  Mod+Ctrl+J     { move-window-down; }
+  Mod+Ctrl+K     { move-window-up; }
+  Mod+Ctrl+L     { move-column-right; }
+
+  // Focus the adjacent monitor.
+  Mod+Shift+Left  { focus-monitor-left; }
+  Mod+Shift+Down  { focus-monitor-down; }
+  Mod+Shift+Up    { focus-monitor-up; }
+  Mod+Shift+Right { focus-monitor-right; }
+  Mod+Shift+H     { focus-monitor-left; }
+  Mod+Shift+J     { focus-monitor-down; }
+  Mod+Shift+K     { focus-monitor-up; }
+  Mod+Shift+L     { focus-monitor-right; }
+
+  // Move the focused window to the adjacent monitor.
+  Mod+Shift+Alt+Left  { move-window-to-monitor-left; }
+  Mod+Shift+Alt+Down  { move-window-to-monitor-down; }
+  Mod+Shift+Alt+Up    { move-window-to-monitor-up; }
+  Mod+Shift+Alt+Right { move-window-to-monitor-right; }
+  Mod+Shift+Alt+H     { move-window-to-monitor-left; }
+  Mod+Shift+Alt+J     { move-window-to-monitor-down; }
+  Mod+Shift+Alt+K     { move-window-to-monitor-up; }
+  Mod+Shift+Alt+L     { move-window-to-monitor-right; }
+
+  // Move the focused column to the adjacent monitor.
+  Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
+  Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
+  Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
+  Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
+  Mod+Shift+Ctrl+H     { move-column-to-monitor-left; }
+  Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
+  Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
+  Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
+
+  // Cycle monitors.
+  Ctrl+Alt+Tab       hotkey-overlay-title="Focus Next Monitor" { focus-monitor-next; }
+  Ctrl+Alt+Shift+Tab hotkey-overlay-title="Focus Previous Monitor" { focus-monitor-previous; }
+
+  // Cycle workspaces.
+  Mod+Tab { focus-workspace-down; }
+  Mod+Shift+Tab { focus-workspace-up; }
+  Mod+Ctrl+Tab { focus-workspace-previous; }
+
+  // Focus workspace.
+  Mod+1 { focus-workspace 1; }
+  Mod+2 { focus-workspace 2; }
+  Mod+3 { focus-workspace 3; }
+  Mod+4 { focus-workspace 4; }
+  Mod+5 { focus-workspace 5; }
+  Mod+6 { focus-workspace 6; }
+  Mod+7 { focus-workspace 7; }
+  Mod+8 { focus-workspace 8; }
+  Mod+9 { focus-workspace 9; }
+
+  // Move to workspace.
+  Mod+Ctrl+1 { move-column-to-workspace 1; }
+  Mod+Ctrl+2 { move-column-to-workspace 2; }
+  Mod+Ctrl+3 { move-column-to-workspace 3; }
+  Mod+Ctrl+4 { move-column-to-workspace 4; }
+  Mod+Ctrl+5 { move-column-to-workspace 5; }
+  Mod+Ctrl+6 { move-column-to-workspace 6; }
+  Mod+Ctrl+7 { move-column-to-workspace 7; }
+  Mod+Ctrl+8 { move-column-to-workspace 8; }
+  Mod+Ctrl+9 { move-column-to-workspace 9; }
+
+  // Sizing, layout, and session controls.
+  Mod+R       { switch-preset-column-width; }
+  Mod+Shift+R { switch-preset-column-width-back; }
+  Mod+F       { maximize-column; }
+  Mod+Shift+F { fullscreen-window; }
+  Mod+M       { maximize-window-to-edges; }
+  Mod+V       { toggle-window-floating; }
+  Mod+W       { toggle-column-tabbed-display; }
+
+  // Others
+  Print { screenshot; }
+  Mod+Shift+E { quit; }
+}
