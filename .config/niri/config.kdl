@@ -76,14 +76,15 @@ binds {
   Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
   // Application shortcuts.
-  Mod+T     hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-  Mod+E     hotkey-overlay-title="Open Files" { spawn "nautilus"; }
-  Mod+Space hotkey-overlay-title="Open Launcher: Noctalia" { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
-  Mod+S     hotkey-overlay-title="Open Control Center: Noctalia" { spawn "noctalia" "msg" "panel-toggle" "control-center"; }
-  Mod+Comma hotkey-overlay-title="Open Settings: Noctalia" { spawn "noctalia" "msg" "settings-toggle"; }
+  Mod+T     hotkey-overlay-title="Open a Terminal: kitty"          { spawn "kitty"; }
+  Mod+E     hotkey-overlay-title="Open Files"                      { spawn "nautilus"; }
+  Mod+Space hotkey-overlay-title="Open Launcher: Noctalia"         { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
+  Mod+Alt+I hotkey-overlay-title="Toggle Session Menu: Noctalia"   { spawn "noctalia" "msg" "panel-toggle" "session"; }
+  Mod+S     hotkey-overlay-title="Toggle Control Center: Noctalia" { spawn "noctalia" "msg" "panel-toggle" "control-center"; }
+  Mod+Comma hotkey-overlay-title="Open Settings: Noctalia"         { spawn "noctalia" "msg" "settings-toggle"; }
 
   // Use logind so Noctalia and other applications receive the system lock event.
-  Super+Alt+L repeat=false hotkey-overlay-title="Lock the Screen" { spawn "loginctl" "lock-session"; }
+  Mod+Alt+L repeat=false hotkey-overlay-title="Lock the Screen" { spawn "loginctl" "lock-session"; }
 
   // Pass volume and brightness control to Noctalia.
   XF86AudioRaiseVolume  allow-when-locked=true { spawn "noctalia" "msg" "volume-up"; }
