@@ -24,6 +24,7 @@ pinned = [
   "kitty",
   "dev.zed.Zed",
   "org.gnome.Nautilus",
+  "md.obsidian.Obsidian",
   "com.onepassword.OnePassword",
   "code",
 ]
