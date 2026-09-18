@@ -152,9 +152,13 @@ binds {
   Ctrl+Alt+Shift+Tab hotkey-overlay-title="Focus Previous Monitor" { focus-monitor-previous; }
 
   // Cycle workspaces.
-  Mod+Tab { focus-workspace-down; }
+  Mod+Page_Down { focus-workspace-down; }
+  Mod+Page_Up   { focus-workspace-up; }
+
+  Mod+Tab       { focus-workspace-down; }
   Mod+Shift+Tab { focus-workspace-up; }
-  Mod+Ctrl+Tab { focus-workspace-previous; }
+
+  Mod+Ctrl+Tab  { focus-workspace-previous; }
 
   // Focus workspace.
   Mod+1 { focus-workspace 1; }
