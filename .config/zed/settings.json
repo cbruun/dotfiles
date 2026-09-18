@@ -1,10 +1,10 @@
 {
   // Theming
-  "icon_theme": "Catppuccin Macchiato",
+  "icon_theme": "Catppuccin Mocha",
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "VSCode Dark Modern",
+    "dark": "Catppuccin Mocha - No Italics",
   },
 
   // Fonts
