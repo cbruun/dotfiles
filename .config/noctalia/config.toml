@@ -40,6 +40,8 @@ radius_top_right = 0
 radius_bottom_left = 0
 radius_bottom_right = 0
 
+start = ["workspaces"]
+
 # Omit clipboard + MPRIS/"Now Playing" widget.
 end = [
   "tray",
