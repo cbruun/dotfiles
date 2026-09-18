@@ -13,6 +13,9 @@ clipboard_enabled = false
 # 1Password system authentication and CLI integration require a Polkit agent.
 polkit_agent = true
 
+[control_center.calendar]
+show_week_numbers = true
+
 [shell.launcher]
 categories = false
 compact = true
