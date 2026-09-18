@@ -4,6 +4,9 @@ source = "builtin"
 builtin = "Catppuccin"
 
 [shell]
+# Set font for Noctalia's shell UI.
+font_family = "Adwaita Sans"
+
 # 1Password system authentication and CLI integration require a Polkit agent.
 polkit_agent = true
 
