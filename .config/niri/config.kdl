@@ -7,6 +7,8 @@ hotkey-overlay {
 
 input {
   touchpad {
+    // Apple-style natural scrolling.
+    natural-scroll
     accel-speed 0.7
   }
 
