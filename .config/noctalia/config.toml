@@ -11,6 +11,8 @@ font_family = "Adwaita Sans"
 polkit_agent = true
 
 [shell.launcher]
+categories = false
+compact = true
 pinned = [
   "org.mozilla.firefox",
   "kitty",
@@ -19,6 +21,10 @@ pinned = [
   "com.onepassword.OnePassword",
   "code",
 ]
+
+[shell.launcher.providers.calculator]
+# Disable calculator results during search.
+global = false
 
 [bar.main]
 # Use the full width of each monitor instead of inset end margins.
