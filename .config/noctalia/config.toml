@@ -65,3 +65,9 @@ session_locked = """
     1password --lock >/dev/null 2>&1
   fi
 """
+
+# Lock the session after 10m without input.
+[idle.behavior.lock]
+timeout = 600
+action = "lock"
+enabled = true
