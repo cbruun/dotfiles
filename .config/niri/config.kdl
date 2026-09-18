@@ -1,6 +1,10 @@
 // Launch Noctalia at startup.
 spawn-at-startup "noctalia"
 
+hotkey-overlay {
+  skip-at-startup
+}
+
 input {
   touchpad {
     accel-speed 0.7
