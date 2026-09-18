@@ -92,10 +92,11 @@ binds {
   XF86MonBrightnessUp   allow-when-locked=true { spawn "noctalia" "msg" "brightness-up"; }
   XF86MonBrightnessDown allow-when-locked=true { spawn "noctalia" "msg" "brightness-down"; }
 
-  // Overview and window management.
+  // Overview and close window.
   Mod+O repeat=false { toggle-overview; }
   Mod+Q repeat=false { close-window; }
 
+  // Window management.
   Mod+Left  { focus-column-left; }
   Mod+Down  { focus-window-down; }
   Mod+Up    { focus-window-up; }
@@ -128,37 +129,28 @@ binds {
   Mod+Shift+L     { focus-monitor-right; }
 
   // Move the focused window to the adjacent monitor.
-  Mod+Shift+Alt+Left  { move-window-to-monitor-left; }
-  Mod+Shift+Alt+Down  { move-window-to-monitor-down; }
-  Mod+Shift+Alt+Up    { move-window-to-monitor-up; }
-  Mod+Shift+Alt+Right { move-window-to-monitor-right; }
-  Mod+Shift+Alt+H     { move-window-to-monitor-left; }
-  Mod+Shift+Alt+J     { move-window-to-monitor-down; }
-  Mod+Shift+Alt+K     { move-window-to-monitor-up; }
-  Mod+Shift+Alt+L     { move-window-to-monitor-right; }
+  Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
+  Mod+Shift+Ctrl+Down  { move-window-to-monitor-down; }
+  Mod+Shift+Ctrl+Up    { move-window-to-monitor-up; }
+  Mod+Shift+Ctrl+Right { move-window-to-monitor-right; }
+  Mod+Shift+Ctrl+H     { move-window-to-monitor-left; }
+  Mod+Shift+Ctrl+J     { move-window-to-monitor-down; }
+  Mod+Shift+Ctrl+K     { move-window-to-monitor-up; }
+  Mod+Shift+Ctrl+L     { move-window-to-monitor-right; }
 
   // Move the focused column to the adjacent monitor.
-  Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
-  Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
-  Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
-  Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
-  Mod+Shift+Ctrl+H     { move-column-to-monitor-left; }
-  Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
-  Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
-  Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
+  Mod+Shift+Alt+Left  { move-column-to-monitor-left; }
+  Mod+Shift+Alt+Down  { move-column-to-monitor-down; }
+  Mod+Shift+Alt+Up    { move-column-to-monitor-up; }
+  Mod+Shift+Alt+Right { move-column-to-monitor-right; }
+  Mod+Shift+Alt+H     { move-column-to-monitor-left; }
+  Mod+Shift+Alt+J     { move-column-to-monitor-down; }
+  Mod+Shift+Alt+K     { move-column-to-monitor-up; }
+  Mod+Shift+Alt+L     { move-column-to-monitor-right; }
 
   // Cycle monitors.
-  Ctrl+Alt+Tab       hotkey-overlay-title="Focus Next Monitor" { focus-monitor-next; }
+  Ctrl+Alt+Tab       hotkey-overlay-title="Focus Next Monitor"     { focus-monitor-next; }
   Ctrl+Alt+Shift+Tab hotkey-overlay-title="Focus Previous Monitor" { focus-monitor-previous; }
-
-  // Cycle workspaces.
-  Mod+Page_Down { focus-workspace-down; }
-  Mod+Page_Up   { focus-workspace-up; }
-
-  Mod+Tab       { focus-workspace-down; }
-  Mod+Shift+Tab { focus-workspace-up; }
-
-  Mod+Ctrl+Tab  { focus-workspace-previous; }
 
   // Focus workspace.
   Mod+1 { focus-workspace 1; }
@@ -185,6 +177,15 @@ binds {
   // Move column to workspace up or down.
   Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
   Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
+
+  // Cycle workspaces.
+  Mod+Page_Down { focus-workspace-down; }
+  Mod+Page_Up   { focus-workspace-up; }
+
+  Mod+Tab       { focus-workspace-down; }
+  Mod+Shift+Tab { focus-workspace-up; }
+
+  Mod+Ctrl+Tab  { focus-workspace-previous; }
 
   // Sizing, layout, and session controls.
   Mod+R       { switch-preset-column-width; }
