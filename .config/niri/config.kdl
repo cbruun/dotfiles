@@ -51,15 +51,6 @@ window-rule {
   tiled-state true
 }
 
-// Noctalia's settings window needs to float, and this allows its notification actions and window
-// activation to work with Niri.
-window-rule {
-  match app-id="dev.noctalia.Noctalia"
-  open-floating true
-  default-column-width { fixed 1080; }
-  default-window-height { fixed 920; }
-}
-
 // Keep 1Password windows focused and floating, including authorization prompts.
 window-rule {
   match app-id=r#"^(1[pP]assword|com\.onepassword\.OnePassword)$"#
