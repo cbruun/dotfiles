@@ -37,7 +37,7 @@ keybinds {
 
 default_layout "compact"
 
-theme "one-half-dark"
+theme "catppuccin-mocha"
 
 pane_frames false
 simplified_ui true
