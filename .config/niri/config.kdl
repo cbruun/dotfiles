@@ -131,24 +131,24 @@ binds {
   Mod+Shift+K     { focus-monitor-up; }
   Mod+Shift+L     { focus-monitor-right; }
 
-  // Move the focused window to the adjacent monitor.
+  // Move the focused window left/right to adjacent monitor or up/down to cloest workspace.
   Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
-  Mod+Shift+Ctrl+Down  { move-window-to-monitor-down; }
-  Mod+Shift+Ctrl+Up    { move-window-to-monitor-up; }
+  Mod+Shift+Ctrl+Down  { move-window-to-workspace-down; }
+  Mod+Shift+Ctrl+Up    { move-window-to-workspace-up; }
   Mod+Shift+Ctrl+Right { move-window-to-monitor-right; }
   Mod+Shift+Ctrl+H     { move-window-to-monitor-left; }
-  Mod+Shift+Ctrl+J     { move-window-to-monitor-down; }
-  Mod+Shift+Ctrl+K     { move-window-to-monitor-up; }
+  Mod+Shift+Ctrl+J     { move-window-to-workspace-down; }
+  Mod+Shift+Ctrl+K     { move-window-to-workspace-up; }
   Mod+Shift+Ctrl+L     { move-window-to-monitor-right; }
 
-  // Move the focused column to the adjacent monitor.
+  // Move the focused column left/right to adjacent monitor or up/down to cloest workspace.
   Mod+Shift+Alt+Left  { move-column-to-monitor-left; }
-  Mod+Shift+Alt+Down  { move-column-to-monitor-down; }
-  Mod+Shift+Alt+Up    { move-column-to-monitor-up; }
+  Mod+Shift+Alt+Down  { move-column-to-workspace-down; }
+  Mod+Shift+Alt+Up    { move-column-to-workspace-up; }
   Mod+Shift+Alt+Right { move-column-to-monitor-right; }
   Mod+Shift+Alt+H     { move-column-to-monitor-left; }
-  Mod+Shift+Alt+J     { move-column-to-monitor-down; }
-  Mod+Shift+Alt+K     { move-column-to-monitor-up; }
+  Mod+Shift+Alt+J     { move-column-to-workspace-down; }
+  Mod+Shift+Alt+K     { move-column-to-workspace-up; }
   Mod+Shift+Alt+L     { move-column-to-monitor-right; }
 
   // Cycle monitors.
