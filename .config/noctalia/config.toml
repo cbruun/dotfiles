@@ -89,3 +89,9 @@ monitors = ["DP-1"]
 timeout = 600
 action = "lock"
 enabled = true
+
+# Suspend after 20m without input.
+[idle.behavior.suspend]
+timeout = 1200
+action = "lock_and_suspend"
+enabled = true
