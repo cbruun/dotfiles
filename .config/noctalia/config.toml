@@ -90,6 +90,12 @@ timeout = 600
 action = "lock"
 enabled = true
 
+# Turn the monitors off after 10m without input.
+[idle.behavior.screen-off]
+timeout = 600
+action = "screen_off"
+enabled = true
+
 # Suspend after 20m without input.
 [idle.behavior.suspend]
 timeout = 1200
