@@ -90,20 +90,28 @@ session_locked = """
 [lockscreen]
 monitors = ["DP-1"]
 
-# Lock the session after 10m without input.
+# Noctalia re-arms idle timers after locking. `timeout` applies before locking, while
+# `locked_timeout` applies after locking.
+# Intended totals from last input: lock at 5m, monitor-off at 10m, and suspend at 20m.
+[idle]
+behavior_order = ["lock", "screen-off", "suspend"]
+
+# Lock the session after 5m without input.
 [idle.behavior.lock]
-timeout = 600
+timeout = 300
 action = "lock"
 enabled = true
 
-# Turn the monitors off after 10m without input.
+# Turn the monitors off after 10m total: 5m after locking.
 [idle.behavior.screen-off]
 timeout = 600
+locked_timeout = 300
 action = "screen_off"
 enabled = true
 
-# Suspend after 20m without input.
+# Suspend after 20m total: 15m after locking.
 [idle.behavior.suspend]
 timeout = 1200
+locked_timeout = 900
 action = "lock_and_suspend"
 enabled = true
