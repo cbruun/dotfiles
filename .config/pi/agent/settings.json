@@ -9,6 +9,7 @@
 
   "packages": [
     "git:git@github.com:cbruun/pi",
-    "npm:@juicesharp/rpiv-ask-user-question"
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:@juicesharp/rpiv-todo"
   ]
 }
