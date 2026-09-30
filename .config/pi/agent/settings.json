@@ -8,7 +8,7 @@
   "hideThinkingBlock": false,
 
   "packages": [
-    "git:git@github.com:cbruun/pi@9d05690",
+    "git:git@github.com:cbruun/pi",
     "npm:@juicesharp/rpiv-ask-user-question@2.11.0"
   ]
 }
