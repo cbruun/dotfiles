@@ -1,5 +1,5 @@
 {
-  "theme": "dark",
+  "theme": "catppuccin-mocha",
 
   "defaultProvider": "zeldoc",
   "defaultModel": "zdev",
