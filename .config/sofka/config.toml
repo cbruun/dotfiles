@@ -1,0 +1,51 @@
+# Sofka configuration. Run `:reload` in an open Sofka session after editing.
+
+default_resource = "pods"
+
+# Keep long condition and event messages readable in document views.
+detail_wrap = true
+
+[skin]
+name = "catppuccin-mocha"
+
+[aliases]
+# Flux CD
+ks = "kustomizations.kustomize.toolkit.fluxcd.io"
+hr = "helmreleases.helm.toolkit.fluxcd.io"
+gr = "gitrepositories.source.toolkit.fluxcd.io"
+helmrepos = "helmrepositories.source.toolkit.fluxcd.io"
+ocirepos = "ocirepositories.source.toolkit.fluxcd.io"
+buckets = "buckets.source.toolkit.fluxcd.io"
+imgrepos = "imagerepositories.image.toolkit.fluxcd.io"
+imgpols = "imagepolicies.image.toolkit.fluxcd.io"
+imgupdates = "imageupdateautomations.image.toolkit.fluxcd.io"
+
+# cert-manager
+certs = "certificates.cert-manager.io"
+certreqs = "certificaterequests.cert-manager.io"
+orders = "orders.acme.cert-manager.io"
+challenges = "challenges.acme.cert-manager.io"
+
+# Gateway API
+gateways = "gateways.gateway.networking.k8s.io"
+gatewayclasses = "gatewayclasses.gateway.networking.k8s.io"
+httproutes = "httproutes.gateway.networking.k8s.io"
+grpcroutes = "grpcroutes.gateway.networking.k8s.io"
+tlsroutes = "tlsroutes.gateway.networking.k8s.io"
+tcproutes = "tcproutes.gateway.networking.k8s.io"
+udproutes = "udproutes.gateway.networking.k8s.io"
+referencegrants = "referencegrants.gateway.networking.k8s.io"
+
+# Larger initial tail and buffer help when investigating failures and rollouts.
+[logs]
+tail = 300
+buffer = 5000
+
+[logging]
+level = "warn"
+
+# Prevent accidental deletions.
+[[guardrails]]
+actions = ["delete", "force-delete"]
+confirmation = "type-resource-name"
+max_bulk = 1
