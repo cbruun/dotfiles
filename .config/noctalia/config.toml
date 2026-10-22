@@ -17,6 +17,7 @@ polkit_agent = true
 show_week_numbers = true
 
 [shell.launcher]
+layout = "simple"
 categories = false
 compact = true
 pinned = [
