@@ -32,6 +32,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   source "${ZDOTDIR}/os/mac.zsh"
 fi
 
+if [[ "$(id -un)" == "cbr" ]] && grep -qi ubuntu /etc/os-release; then
+  source "${ZDOTDIR}/os/work.zsh"
+fi
+
 if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
   source "${ZDOTDIR}/os/wsl.zsh"
 fi
