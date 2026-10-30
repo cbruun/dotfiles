@@ -30,7 +30,7 @@ layout {
   }
 }
 
-// Three 2560x1440 monitors, arranged left-to-right as DP-2, DP-1, DP-3.
+// Home PC: three 2560x1440 monitors, arranged left-to-right as DP-2, DP-1, DP-3.
 // Omitting the refresh rate selects the highest available rate for that resolution.
 output "DP-2" {
   mode "2560x1440"
@@ -49,6 +49,36 @@ output "DP-3" {
   mode "2560x1440"
   scale 1
   position x=5120 y=0
+}
+
+// Framework Laptop 13 Pro built-in panel. Ignored where no eDP-1 exists.
+// Position is explicit so the serial-matched Dell blocks below do not push it to the right of the
+// layout. No focus-at-startup is set, otherwise it would win over the middle Dell workstation
+// monitorat. For laptop-only sessions, Niri falls back to focusing the first connected output.
+output "eDP-1" {
+  scale 1.5
+  position x=0 y=0
+}
+
+// Workstation externals: three DELL U2722DE matched by serial so dock-port shuffling does not
+// matter. Physical arrangement left-to-right: eDP-1, monitor 1, monitor 2, monitor 3.
+output "Dell Inc. DELL U2722DE 5J5Z2P3" {
+  mode "2560x1440"
+  scale 1
+  position x=1920 y=0
+}
+
+output "Dell Inc. DELL U2722DE HM6Z2P3" {
+  mode "2560x1440"
+  scale 1
+  position x=4480 y=0
+  focus-at-startup
+}
+
+output "Dell Inc. DELL U2722DE 3B9T7P3" {
+  mode "2560x1440"
+  scale 1
+  position x=7040 y=0
 }
 
 // Render square tiled-window corners.
