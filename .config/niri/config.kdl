@@ -30,6 +30,11 @@ cursor {
   xcursor-theme "Bibata-Modern-Classic"
 }
 
+// Closing the lid locks the session.
+switch-events {
+  lid-close { spawn "loginctl" "lock-session"; }
+}
+
 layout {
   // Keep the active highlight, but do not outline unfocused windows.
   focus-ring {
