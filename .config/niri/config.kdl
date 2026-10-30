@@ -6,6 +6,13 @@ hotkey-overlay {
 }
 
 input {
+  keyboard {
+    xkb {
+      layout "us"
+      variant "altgr-intl"
+    }
+  }
+
   touchpad {
     // Apple-style natural scrolling.
     natural-scroll
