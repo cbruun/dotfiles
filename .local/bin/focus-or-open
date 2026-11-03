@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# Focus the most recently focused window matching an app-id regex, or launch
+# the app when no window matches.
+#
+# Usage: focus-or-open <app-id-regex> <desktop-file-id> [launch-args...]
+#
+# Examples:
+#   focus-or-open '^slack$' slack
+#   focus-or-open '^chrome-outlook\.office\.com__mail_-Default$' outlook-pwa
+
+set -euo pipefail
+
+if [[ $# -lt 2 ]]; then
+  echo "usage: focus-or-open <app-id-regex> <desktop-file-id> [launch-args...]" >&2
+  exit 1
+fi
+
+app_id_re=$1
+desktop_id=$2
+shift 2
+
+window_id=$(niri msg --json windows |
+  jq -r --arg re "$app_id_re" '
+    [.[]
+    | select(.app_id != null)
+    | select(.app_id | test($re))]
+    | sort_by(.focus_timestamp.secs, .focus_timestamp.nanos)
+    | last
+    | .id // empty')
+
+if [[ -n $window_id ]]; then
+  exec niri msg action focus-window --id "$window_id"
+fi
+
+exec gtk-launch "$desktop_id" "$@"

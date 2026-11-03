@@ -131,6 +131,13 @@ binds {
   Mod+S     hotkey-overlay-title="Toggle Control Center: Noctalia" { spawn "noctalia" "msg" "panel-toggle" "control-center"; }
   Mod+Comma hotkey-overlay-title="Open Settings: Noctalia"         { spawn "noctalia" "msg" "settings-toggle"; }
 
+  // Focus an app's window when one exists, otherwise launch it. The regex must match the app_id
+  // reported by `niri msg --json windows`. Chrome PWAs derive theirs from the URL.
+  Mod+F8  repeat=false hotkey-overlay-title="Focus or Open: Obsidian" { spawn "focus-or-open" "^md\\.obsidian\\.Obsidian$" "obsidian_obsidian"; }
+  Mod+F9  repeat=false hotkey-overlay-title="Focus or Open: Teams"    { spawn "focus-or-open" "^chrome-teams\\.microsoft\\.com__-Default$" "teams-pwa"; }
+  Mod+F11 repeat=false hotkey-overlay-title="Focus or Open: Slack"    { spawn "focus-or-open" "^slack$" "slack"; }
+  Mod+F12 repeat=false hotkey-overlay-title="Focus or Open: Outlook"  { spawn "focus-or-open" "^chrome-outlook\\.office\\.com__mail_-Default$" "outlook-pwa"; }
+
   // Use logind so Noctalia and other applications receive the system lock event.
   Mod+Alt+L repeat=false hotkey-overlay-title="Lock the Screen" { spawn "loginctl" "lock-session"; }
 
