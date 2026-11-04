@@ -40,12 +40,8 @@ helper = "!f() { if command -v git-credential-manager >/dev/null 2>&1; then exec
 [credential "https://dev.azure.com"]
 useHttpPath = true
 
-[includeIf "gitdir:~/personal/"]
-path = ~/.config/git/config.wsl
-
 [includeIf "gitdir:~/work/"]
 path = ~/.config/git/config.work
-path = ~/.config/git/config.wsl
 
 [alias]
 a = add
