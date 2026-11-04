@@ -17,6 +17,9 @@ export YSU_MESSAGE_FORMAT="\n $(tput setaf 3) $(tput bold)$(tput setaf 4)%ali
 # Enable tab autocomplete, for instance when changing directory
 zstyle ':completion:*' menu select
 
+# Allow comments in interactive shells
+setopt interactivecomments
+
 source "${ZDOTDIR}/config/history.zsh"
 
 # Enable cycle through sub-command history.
