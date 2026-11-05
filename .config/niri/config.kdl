@@ -101,12 +101,11 @@ window-rule {
   tiled-state true
 }
 
-// Keep 1Password unlock/authorization prompts focused and floating, but let the main UI tile
-// normally.
+// Let 1Password windows take focus when they open (e.g. auth prompts), but do not float them. The
+// app opens all windows with a generic title and only names the main UI later, so any regex rules
+// would not work.
 window-rule {
   match app-id=r#"^(1[pP]assword|com\.onepassword\.OnePassword)$"#
-  exclude title=r#"— 1Password$"#
-  open-floating true
   open-focused true
 }
 
