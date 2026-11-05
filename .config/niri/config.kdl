@@ -14,6 +14,8 @@ input {
   }
 
   touchpad {
+    // Gentle tap produces a click (libinput tap-to-click).
+    tap
     // Apple-style natural scrolling.
     natural-scroll
     accel-speed 0.7
